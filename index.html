@@ -36,6 +36,34 @@
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
+
+        /* Styles for the new cartoon gallery */
+        .cartoon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .cartoon-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.07);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .cartoon-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .cartoon-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
     </style>
 </head>
 <body>
@@ -167,9 +195,25 @@
                 </div>
             </div>
         </section>
+
+        <!-- Cartoon Gallery Section -->
+        <section id="cartoon-gallery" class="content-section bg-light">
+            <div class="container">
+                <h2 style="text-align: center;">From the Drawing Board</h2>
+                <p class="section-intro">A collection of cartoons and illustrations about activism, social justice, and making a difference.</p>
+                <div class="cartoon-grid">
+                    <div class="cartoon-card"><img src="images/Black History Month.png" alt="Cartoon for Black History Month"></div>
+                    <div class="cartoon-card"><img src="images/National Donor Day.png" alt="Cartoon for National Donor Day"></div>
+                    <div class="cartoon-card"><img src="images/Susan B Anthony.png" alt="Cartoon of Susan B. Anthony"></div>
+                    <div class="cartoon-card"><img src="images/World Religion Day.png" alt="Cartoon for World Religion Day"></div>
+                    <div class="cartoon-card"><img src="images/aster-art.png" alt="Cartoon of Aster Counihan"></div>
+                    <div class="cartoon-card"><img src="images/Li Qiaochu.png" alt="Cartoon of Li Qiaochu"></div>
+                </div>
+            </div>
+        </section>
         
         <!-- Contact Section -->
-        <section id="contact-us" class="content-section bg-light">
+        <section id="contact-us" class="content-section">
              <div class="container" style="text-align: center;">
                  <h2>Get in Touch</h2>
                 <p class="section-intro">We are always open to new ideas, partnerships, and conversations. Whether you are seeking support or wish to collaborate, we would love to hear from you.</p>
