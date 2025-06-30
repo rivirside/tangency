@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Tangency Foundation</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for the book recommendation grid */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 40px;
+        }
+        .book-card {
+            text-align: center;
+        }
+        .book-card a {
+            text-decoration: none;
+        }
+        .book-cover {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            aspect-ratio: 2 / 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+        .book-cover-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 1.3;
+        }
+        .book-cover-author {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+        .book-description {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            padding: 0 10px;
+            line-height: 1.5;
+        }
+
+        /* Styles for the general resources grid */
+        .general-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .general-card {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        .general-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .general-card h4 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Tangency Foundation</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="literacy.html">Activism Literacy</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="resources.html" class="active">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Resources</h1>
+            <p class="section-intro">A curated collection of articles, guides, and tools to support your activism journey.</p>
+        </div>
+
+        <section class="content-section">
+            <div class="container">
+                <div class="program-tabs" role="tablist" aria-label="Resource Categories">
+                    <button id="tab-articles" class="tab-link active" role="tab" aria-selected="true" aria-controls="panel-articles">Articles & Guides</button>
+                    <button id="tab-books" class="tab-link" role="tab" aria-selected="false" aria-controls="panel-books">Book Recommendations</button>
+                    <button id="tab-general" class="tab-link" role="tab" aria-selected="false" aria-controls="panel-general">General Resources</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Articles & Guides Panel -->
+                    <div id="panel-articles" class="tab-panel active" role="tabpanel" tabindex="0" aria-labelledby="tab-articles">
+                        <div class="article-grid">
+                            <div class="article-card">
+                                <a href="resources/10-books-for-activists.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2874&auto=format&fit=crop" alt="A collection of old books on a shelf." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">10 Books to Serve as a Jumping Off Point for Any Activist</h3>
+                                        <p class="article-excerpt">Whether you’re into social, political or environmental activism, or all of the above, there’s a book for everyone...</p>
+                                        <p class="article-meta">By Catherine Stolz | June 28, 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-card">
+                                <a href="resources/strategic-campaign-planning.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="A person drawing a strategy diagram on a glass wall." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">Toolkit: How to Plan a Strategic Campaign</h3>
+                                        <p class="article-excerpt">Move beyond reactive protest to proactive campaigns that achieve tangible victories. This toolkit walks you through the core steps of strategic planning for activists.</p>
+                                        <p class="article-meta">Resource | June 30, 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-card">
+                                <a href="resources/building-coalitions-guide.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="A diverse group of people in a planning meeting." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">Guide: Building & Sustaining a Coalition</h3>
+                                        <p class="article-excerpt">Lasting change is built together. Learn the essential skills required to build broad coalitions and foster a sense of shared ownership over a movement.</p>
+                                        <p class="article-meta">Resource | June 30, 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                             <div class="article-card">
+                                <a href="resources/social-media-advocacy.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2874&auto=format&fit=crop" alt="A collection of social media logos on a screen." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">The Activist's Guide to Social Media</h3>
+                                        <p class="article-excerpt">Choosing the right platform is key. A comparison of Twitter, Instagram, TikTok, and more for effective advocacy.</p>
+                                        <p class="article-meta">Resource | June 30, 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Book Recommendations Panel -->
+                    <div id="panel-books" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-books" hidden>
+                        <p class="section-intro left-aligned" style="text-align:center;">A reading list for changemakers. These books provide historical context, strategic insights, and powerful inspiration.</p>
+                        <div class="book-grid" style="margin-top:40px;">
+                            <div class="book-card">
+                                <a href="resources/rules-for-radicals-review.html">
+                                    <div class="book-cover" style="background-color: #1a535c;">
+                                        <div class="book-cover-title">Rules for Radicals</div>
+                                        <div class="book-cover-author">Saul Alinsky</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A pragmatic guide on how to effectively take power from the "Haves" for the "Have-Nots."</p>
+                            </div>
+                            <div class="book-card">
+                                <a href="resources/freedom-is-a-constant-struggle-review.html">
+                                    <div class="book-cover" style="background-color: #4ecdc4;">
+                                        <div class="book-cover-title">Freedom Is a Constant Struggle</div>
+                                        <div class="book-cover-author">Angela Y. Davis</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A collection of essays connecting global struggles against state violence, racism, and oppression.</p>
+                            </div>
+                            <div class="book-card">
+                                <a href="resources/emergent-strategy-review.html">
+                                    <div class="book-cover" style="background-color: #ff6b6b;">
+                                        <div class="book-cover-title">Emergent Strategy</div>
+                                        <div class="book-cover-author">adrienne maree brown</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A guide to creating resilient and adaptive movements inspired by the science of biomimicry.</p>
+                            </div>
+                             <div class="book-card">
+                                <a href="resources/this-is-an-uprising-review.html">
+                                    <div class="book-cover" style="background-color: #343a40;">
+                                        <div class="book-cover-title">This Is an Uprising</div>
+                                        <div class="book-cover-author">Mark & Paul Engler</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">An exploration of strategic nonviolence and how it blends mass protest with structured organizing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- General Resources Panel -->
+                    <div id="panel-general" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-general" hidden>
+                        <p class="section-intro left-aligned" style="text-align:center;">A collection of helpful toolkits, external organizations, and other materials for activists.</p>
+                        <div class="general-grid" style="margin-top: 40px;">
+                            <a href="https://www.aclu.org/know-your-rights/" target="_blank" class="general-card">
+                                <h4>ACLU: Know Your Rights</h4>
+                                <p>Essential, state-specific information for protestors and activists from the American Civil Liberties Union.</p>
+                            </a>
+                             <a href="https://beautifultrouble.org/" target="_blank" class="general-card">
+                                <h4>Beautiful Trouble Toolbox</h4>
+                                <p>An online collection of principles, stories, tactics, and theories for nonviolent social change.</p>
+                            </a>
+                            <a href="https://www.sp.org/our-work/learning-for-justice/" target="_blank" class="general-card">
+                                <h4>Learning for Justice</h4>
+                                <p>Free educational resources from the Southern Poverty Law Center to help teach about social justice and anti-bias.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for the tab functionality
+        const tabs = document.querySelectorAll('.tab-link');
+        const panels = document.querySelectorAll('.tab-panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                panels.forEach(p => {
+                    p.classList.remove('active');
+                    p.hidden = true;
+                });
+
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                const targetPanelId = tab.getAttribute('aria-controls');
+                const targetPanel = document.getElementById(targetPanelId);
+                targetPanel.classList.add('active');
+                targetPanel.hidden = false;
+            });
+        });
+    </script>
+
+</body>
+</html>

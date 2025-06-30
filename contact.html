@@ -6,6 +6,28 @@
     <title>Contact | Tangency Foundation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles for the contact topics grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            text-align: left;
+        }
+        .contact-card {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        .contact-card h4 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,7 +39,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="literacy.html">Activism Literacy</a></li>
                     <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="articles.html">Blog</a></li>
+                    <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
             </nav>
@@ -27,12 +49,40 @@
     <main>
         <div class="page-header">
             <h1 class="page-title">Get in Touch</h1>
+            <p class="section-intro">We are always open to new ideas, partnerships, and conversations. Whether you are seeking support or wish to collaborate, we would love to hear from you.</p>
         </div>
 
-        <section id="contact-info" class="content-section">
+        <section id="contact-info" class="content-section" style="padding-top: 0;">
             <div class="container" style="text-align: center;">
-                <p class="section-intro">We are always open to new ideas, partnerships, and conversations. Whether you are seeking support or wish to collaborate, we would love to hear from you.</p>
-                <a href="mailto:contact@activisthq.org" class="cta-button">contact@activisthq.org</a>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>Partnership & Collaboration</h4>
+                        <p>If you represent an organization, company, or are an individual interested in working with us on a project, please reach out.</p>
+                    </div>
+                     <div class="contact-card">
+                        <h4>Grant & Scholarship Inquiries</h4>
+                        <p>For questions about our micro-grant and scholarship application processes, eligibility, or timelines.</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Press & Media</h4>
+                        <p>For all media inquiries, interview requests, or information about our work for a story, please contact us here.</p>
+                    </div>
+                     <div class="contact-card">
+                        <h4>Share Your Story</h4>
+                        <p>Are you an activist with a story to tell? We are always looking for guests for the Activist HQ podcast and stories for our blog.</p>
+                    </div>
+                     <div class="contact-card">
+                        <h4>Corporate Partnerships</h4>
+                        <p>Interested in our corporate volunteer and donation matching programs? Let's discuss how your team can get involved.</p>
+                    </div>
+                     <div class="contact-card">
+                        <h4>General Inquiries</h4>
+                        <p>If your question doesn't fit into the categories above, we would still love to hear from you.</p>
+                    </div>
+                </div>
+
+                <a href="mailto:contact@activisthq.org" class="cta-button" style="margin-top: 60px;">contact@activisthq.org</a>
             </div>
         </section>
     </main>
