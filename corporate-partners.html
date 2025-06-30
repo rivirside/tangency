@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Partnerships | Tangency Foundation</title>
+    <!-- Link to existing stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .partner-logo-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 60px; /* Increased gap for larger logos */
+            margin: 40px 0;
+            padding: 20px;
+        }
+        .partner-logo-grid img {
+            max-height: 100px; /* Increased size from 50px */
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .partner-logo-grid img:hover {
+            opacity: 1;
+        }
+        .volunteer-options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .volunteer-option-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        .volunteer-option-card h4 {
+            font-size: 1.4rem;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Navigation -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">Tangency Foundation</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="literacy.html">Activism Literacy</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-title">Amplify Your Impact</h1>
+            <p class="section-intro">As a student-organized, grassroots 501(c)(3), the Tangency Foundation offers a unique partnership opportunity. Empower your employees to make a lasting difference by connecting with a cause that is authentic, agile, and deeply committed to community-level change.</p>
+        </div>
+
+        <!-- Main Content -->
+        <section id="corporate-info" class="content-section">
+            <div class="container">
+
+                <article class="featured-item" style="background: white; padding: 40px; border-radius: 12px;">
+                    <h2 style="text-align: center;">Turn Your Passion into Matched Donations</h2>
+                    <p class="section-intro left-aligned">The Tangency Foundation is a registered 501(c)(3) nonprofit organization on corporate giving platforms like <strong>Benevity</strong>, which serves companies like Google, Starbucks, and many more. This makes it easy for employees to amplify their impact. When you donate or volunteer with us and log your activity through your employer's portal, your company provides a matching financial contribution, doubling your support for our mission.</p>
+
+                    <div class="partner-logo-grid">
+                        <img src="images/starbucks-logo.png" alt="Starbucks Logo">
+                        <img src="images/google-logo.png" alt="Google Logo">
+                        <img src="images/benevity-logo.png" alt="Benevity Logo">
+                    </div>
+                </article>
+
+                <article class="featured-item dynamic-layout" style="margin-top: 50px;">
+                    <div class="featured-text">
+                        <h3>What We Do</h3>
+                        <p>The Tangency Foundation serves as a crucial point of connection between innovative ideas, grassroots movements, and vital resources. We are dedicated to fostering a more effective global activist community by advancing <strong>Activism Literacy</strong>—the essential framework of knowledge and skills required to engage in effective, sustainable, and impactful social change.</p>
+                        <p>Our work involves providing direct funding through micro-grants, educational support through scholarships, and strategic guidance to activists and community organizations striving to create a more just and equitable world.</p>
+                    </div>
+                    <div class="featured-visual">
+                        <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1974&auto=format&fit=crop" alt="People collaborating on a project.">
+                    </div>
+                </article>
+
+                <div class="page-header" style="padding: 80px 0 40px 0; text-align:left; border:none;">
+                    <h2 style="text-align:center;">Meaningful Volunteer Opportunities</h2>
+                    <p class="section-intro" style="text-align:center;">We welcome employees who are passionate about advocacy and social change. Volunteering with us offers a unique opportunity to apply your skills in a meaningful way. Your volunteer hours, when logged through your employer's portal, generate significant financial support for our programs.</p>
+                </div>
+                
+                <div class="volunteer-options-grid">
+                    <div class="volunteer-option-card">
+                        <h4>Operational Support</h4>
+                        <p>Help us run our day-to-day operations. This could involve skills-based volunteering in areas like marketing, web development, grant writing, or administrative support, providing the essential backbone for all our programs.</p>
+                    </div>
+                    <div class="volunteer-option-card">
+                        <h4>Client & Project Assistance</h4>
+                        <p>Work directly with the activists and community organizations we support. You can offer your expertise as a project consultant, mentor, or provide hands-on assistance to help our partners achieve their goals.</p>
+                    </div>
+                    <div class="volunteer-option-card">
+                        <h4>Develop Your Own Project</h4>
+                        <p>Have an idea for a project that aligns with our mission? We encourage employees to develop their own "impact projects." We can provide the framework and support to help you turn your vision for change into a reality.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-us" class="content-section bg-light">
+             <div class="container" style="text-align: center;">
+                 <h2 style="text-align: center;">Have Questions?</h2>
+                <p class="section-intro">Let's connect. Reach out to discuss how you or your team can get involved.</p>
+                <a href="mailto:contact@activisthq.org" class="cta-button">contact@activisthq.org</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
