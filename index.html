@@ -9,35 +9,53 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Additional styles to enhance the new homepage layout */
+        /* --- Hero Section Styles --- */
         .hero {
-            padding: 140px 20px 100px;
+            position: relative; /* Needed for the overlay */
+            padding: 160px 20px 120px;
             text-align: center;
-            background: var(--primary-color);
             color: white;
+            background-image: url('https://images.unsplash.com/photo-1579548122204-7ab18889a714?q=80&w=2940&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        /* Overlay to ensure text is readable */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 83, 92, 0.7); /* Dark teal overlay from primary color */
+            z-index: -1;
         }
 
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-top: 15px;
             font-weight: 300;
             opacity: 0.9;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
         }
         
         .bg-light {
-            background-color: #f8f9fa; /* A slightly off-white for contrast */
+            background-color: #f8f9fa;
             border-top: 1px solid var(--border-color);
             border-bottom: 1px solid var(--border-color);
         }
 
-        /* Styles for the new cartoon gallery */
+        /* --- Cartoon Gallery Styles --- */
         .cartoon-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -62,6 +80,12 @@
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        /* --- Podcast Image Styles --- */
+        #podcast-intro .episode-card img {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
         }
 
     </style>
@@ -156,18 +180,19 @@
                 <p class="section-intro">Interviews with activists, community leaders, and the inspiring people we have worked with. Hear stories from the front lines and learn about the strategies that create lasting change.</p>
                  <div class="episode-grid">
                     <div class="episode-card">
-                        <img src="https://placehold.co/600x400/1a535c/ffffff?text=Episode+Art" alt="Episode artwork placeholder">
+                        <img src="images/Activist ToolKit Episode.png" alt="The Activist ToolKit Podcast Episode Artwork" onerror="this.onerror=null;this.src='https://placehold.co/600x600/1a535c/ffffff?text=Episode+Art';">
                         <h4>The Activist ToolKit</h4>
                         <p>A deep dive into the essential strategies and tools every activist needs for a successful campaign.</p>
                     </div>
                      <div class="episode-card">
-                        <img src="https://placehold.co/600x400/ff6b6b/ffffff?text=Episode+Art" alt="Episode artwork placeholder">
-                        <h4>Interview with an Organizer</h4>
-                        <p>Hear firsthand from a community organizer about the challenges and triumphs of building a grassroots movement.</p>
+                        <img src="images/Brooke Goodspeed.png" alt="Podcast interview with Brooke Goodspeed" onerror="this.onerror=null;this.src='https://placehold.co/600x600/ff6b6b/ffffff?text=Episode+Art';">
+                        <h4>Interview with Brooke Goodspeed</h4>
+                        <p>The founder of the GET Included Cafe shares her journey in building an inclusive community space.</p>
                     </div>
                 </div>
-                <div style="text-align: center;">
-                     <a href="programs.html" class="cta-button">Listen Now</a>
+                <div class="podcast-links" style="justify-content: center; margin-top: 40px; gap: 20px;">
+                    <a href="https://podcasts.apple.com" class="podcast-btn apple" target="_blank">Apple Podcasts</a>
+                    <a href="https://open.spotify.com/show/1ug6TLV8HHGVJ0FJtiGoid" class="podcast-btn spotify" target="_blank">Spotify</a>
                 </div>
             </div>
         </section>
@@ -203,11 +228,13 @@
                 <p class="section-intro">A collection of cartoons and illustrations about activism, social justice, and making a difference.</p>
                 <div class="cartoon-grid">
                     <div class="cartoon-card"><img src="images/Black History Month.png" alt="Cartoon for Black History Month"></div>
-                    <div class="cartoon-card"><img src="images/National Donor Day.png" alt="Cartoon for National Donor Day"></div>
                     <div class="cartoon-card"><img src="images/Susan B Anthony.png" alt="Cartoon of Susan B. Anthony"></div>
                     <div class="cartoon-card"><img src="images/World Religion Day.png" alt="Cartoon for World Religion Day"></div>
+                    <div class="cartoon-card"><img src="images/National Donor Day.png" alt="Cartoon for National Donor Day"></div>
+                    <div class="cartoon-card"><img src="images/World Wetlands Day.png" alt="Cartoon for World Wetlands Day"></div>
                     <div class="cartoon-card"><img src="images/aster-art.png" alt="Cartoon of Aster Counihan"></div>
                     <div class="cartoon-card"><img src="images/Li Qiaochu.png" alt="Cartoon of Li Qiaochu"></div>
+                    <div class="cartoon-card"><img src="images/World Activism Literacy Day.png" alt="Cartoon for World Activism Literacy Day"></div>
                 </div>
             </div>
         </section>

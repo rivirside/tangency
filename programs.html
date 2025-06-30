@@ -6,6 +6,13 @@
     <title>Our Programs | Tangency Foundation</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* This rule specifically targets the podcast episode images to make them square */
+        #panel-podcast .episode-card img {
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
 
@@ -187,21 +194,19 @@
                         <p class="section-intro left-aligned" style="max-width: none;">Interviews with activists, community leaders, and the inspiring people we have worked with. Hear stories from the front lines and learn about the strategies that create lasting change.</p>
                         
                         <div class="podcast-links">
-                            <a href="#" class="podcast-btn apple">Apple Podcasts</a>
-                            <a href="#" class="podcast-btn spotify">Spotify</a>
-                            <a href="#" class="podcast-btn google">Google Podcasts</a>
-                            <a href="#" class="podcast-btn rss">RSS Feed</a>
+                            <a href="https://podcasts.apple.com/us/podcast/activist-hq/id1584865828" class="podcast-btn apple">Apple Podcasts</a>
+                            <a href="https://open.spotify.com/show/1ug6TLV8HHGVJ0FJtiGoid" class="podcast-btn spotify" target="_blank">Spotify</a>
                         </div>
 
                         <h3 style="text-align: center; margin-top: 50px; font-size: 1.8rem; color: var(--primary-color);">Featured Episodes</h3>
                         <div class="episode-grid">
                             <div class="episode-card">
-                                <img src="https://placehold.co/600x400/1a535c/ffffff?text=Episode+Art" alt="Episode artwork placeholder">
+                                <img src="images/Activist ToolKit Episode.png" alt="The Activist ToolKit Podcast Episode Artwork">
                                 <h4>The Activist ToolKit</h4>
                                 <p>A deep dive into the essential strategies and tools every activist needs for a successful campaign.</p>
                             </div>
                              <div class="episode-card">
-                                <img src="https://placehold.co/600x400/ff6b6b/ffffff?text=Episode+Art" alt="Episode artwork placeholder">
+                                <img src="images/Brooke Goodspeed.png" alt="Podcast interview with Brooke Goodspeed">
                                 <h4>Interview with Brooke Goodspeed</h4>
                                 <p>The founder of the GET Included Cafe shares her journey in building an inclusive community space.</p>
                             </div>
