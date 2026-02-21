@@ -1,38 +1,26 @@
 # Power Map Canvas
 
-Use this printable canvas to guide your session. Draw concentric rings with the primary target in the center, secondary targets in the middle ring, and allies/opponents on the outer ring.
+Use this canvas to map who is impacted vs who has influence.
 
-## Instructions
-1. Write the demand and win statement at the top.
-2. Place the **Primary Target** in the center circle.
-3. Add **Secondary Targets** (influencers, advisors, donors) in the middle ring.
-4. Add **Allies / Opponents / Undecided** in the outer ring. Use color codes:
-   - Green = Ally
-   - Yellow = Undecided / Moveable
-   - Red = Opponent
-5. Draw arrows to represent relationships or leverage lines.
-6. List follow-up research questions in the footer.
+1. Demand: ________________________________________________
+2. Win Statement: __________________________________________
 
-## Canvas Layout
+## Circle Sketch
 ```
-+---------------------------------------------------------+
-| DEMAND: _______________________________________________ |
-| WIN STATEMENT: ________________________________________ |
-|                                                         |
-|                [   Primary Target   ]                   |
-|                                                         |
-|      (Secondary)                    (Secondary)         |
-|                                                         |
-|  Ally/Opp.                                      Ally/Opp|
-|                                                         |
-|  Notes: ______________________________________________  |
-|         ______________________________________________  |
-+---------------------------------------------------------+
+                Allies / Opponents / Moveable
+                       (Outer Ring)
+
+                        [           ]
+                        [ Primary   ]
+                        [  Target   ]
+
+            (Secondary)             (Secondary)
+
 ```
 
 ## Follow-up Tracker
-| Influence Node | Category (Ally/Opp/Moveable) | Assigned To | Next Action | Due Date |
-|----------------|-----------------------------|-------------|-------------|----------|
-|                |                             |             |             |          |
-|                |                             |             |             |          |
-|                |                             |             |             |          |
+| Influence Node | Category | Owner | Next Action | Due Date |
+|----------------|----------|-------|-------------|----------|
+|                |          |       |             |          |
+|                |          |       |             |          |
+|                |          |       |             |          |
