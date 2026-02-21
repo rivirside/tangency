@@ -1,22 +1,46 @@
-POWER MAP CANVAS
-Use this worksheet to map who is impacted vs who has influence.
+POWER MAP WORKBOOK
+Tangency Foundation
 
 Demand: _______________________________________________________________
 Win Statement: _________________________________________________________
 
-Circle Sketch (copy to a whiteboard or notebook)
+DRAWING SPACE (Use markers or sticky notes inside the box)
++------------------------------------------------------------------+
+|                                                                  |
+|                                                                  |
+|                                                                  |
+|                                                                  |
+|                                                                  |
+|                                                                  |
++------------------------------------------------------------------+
 
-                Allies / Opponents / Moveable
-                       (Outer Ring)
+IMPACT VS INFLUENCE MATRIX
+Write names in the quadrants. Left = Low Influence, Right = High Influence. Top = Highly Impacted.
++---------------------------+---------------------------+
+| Q1: Highly impacted &     | Q4: Decision makers /      |
+| influential. Co-design    | validators. Prepare brief  |
+| strategy here.            | facts & asks.              |
+|                           |                           |
+|                           |                           |
+|                           |                           |
++---------------------------+---------------------------+
+| Q2: Impacted but with     | Q3: Low impact + low       |
+| limited power. Build      | influence. Monitor or      |
+| leadership + stories.     | inform occasionally.       |
+|                           |                           |
+|                           |                           |
+|                           |                           |
++---------------------------+---------------------------+
 
-                        [           ]
-                        [ PRIMARY   ]
-                        [  TARGET   ]
+LEGEND NOTES
+Ally color / sticker: _______________________
+Moveable color / sticker: ___________________
+Opponent color / sticker: ___________________
 
-            Secondary                     Secondary
-
-Follow-up Tracker
+FOLLOW-UP TRACKER
 Influence Node | Category | Owner | Next Action | Due Date
+_______________|__________|_______|_____________|_________
+_______________|__________|_______|_____________|_________
 _______________|__________|_______|_____________|_________
 _______________|__________|_______|_____________|_________
 _______________|__________|_______|_____________|_________
