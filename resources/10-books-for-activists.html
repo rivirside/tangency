@@ -12,13 +12,18 @@
     <header class="site-header">
         <div class="header-container">
             <a href="../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../literacy.html">Activism Literacy</a></li>
                     <li><a href="../programs.html">Our Programs</a></li>
-                    <li><a href="../articles.html">Articles</a></li>
+                    <li><a href="../resources.html" class="active">Resources</a></li>
                     <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,12 +84,17 @@
                     </li>
                 </ol>
 
+                <div class="action-kit-embed" data-action-tags="education,communications,storytelling" data-limit="3" data-show-link="true"></div>
+
                 <hr class="article-divider">
 
                 <div class="author-bio">
                     <p><strong>About the Author:</strong> Catherine is an avid supporter of environmentalism and sustainability at home and worldwide. She earned her bachelor's in political science and journalism and loves to explore how social issues are shaped by law and politics. When she's not blogging for the Tangency Foundation, Catherine works in communications and public relations. You can find her on Twitter at @Catherine_Stolz.</p>
                 </div>
-            </div>
+                <div class="article-back-link">
+                    <a href="../resources.html" class="cta-button">← Back to Resources</a>
+                </div>
+                </div>
         </article>
     </main>
 
@@ -93,6 +103,18 @@
             <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
 
 </body>
 </html>

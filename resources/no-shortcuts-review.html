@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review: No Shortcuts | Tangency Foundation</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../programs.html">Our Programs</a></li>
+                    <li><a href="../resources.html" class="active">Resources</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="article-header" style="background-image: url('https://images.unsplash.com/photo-1501366062246-723b4d3cbfc1?q=80&w=2940&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                <h1 class="article-title-full" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.65);">Book Review: No Shortcuts</h1>
+                <p class="article-meta-full">Organizing for Power in the New Gilded Age | Published on July 2, 2025</p>
+            </header>
+            
+            <section class="content-section">
+                <div class="container article-content-container">
+                    <p>Jane McAlevey’s <em>No Shortcuts</em> is both a love letter to deep organizing and a sharp critique of advocacy models that rely on email lists and advertising dollars. Through detailed case studies—from the Chicago Teachers Union strike to environmental justice fights in Nevada—McAlevey shows what happens when workers and community members are trusted to lead their own campaigns and build majorities. This book is a must-read for any organizer who wants to move beyond “mobilizations” toward sustained power-building.</p>
+
+                    <h3 class="article-divider">Core Ideas</h3>
+                    <p><strong>Whole-worker organizing.</strong> Members bring their full lives to the fight. Campaigns that address wages but ignore housing, health care, or environmental justice leave solidarity on the table.</p>
+                    <p><strong>Structure tests.</strong> Instead of guessing readiness, McAlevey urges a drumbeat of petitions, practice pickets, and mass meetings that measure real participation and pull people deeper into leadership.</p>
+                    <p><strong>High-stakes negotiations.</strong> She wants the rank-and-file at the table and in the room, using escalating tactics and democratic decision-making to keep pressure grounded in member power.</p>
+
+                    <h3 class="article-divider">How to Apply the Lessons</h3>
+                    <p>Audit your campaign against McAlevey’s “advocacy/mobilizing/organizing” spectrum and ask bluntly who is making decisions. Design structure tests that start with a petition and crescendo toward majority actions. And invest in organic leaders—the people others already follow—even if they aren’t the loudest voices in the room.</p>
+
+                    <div class="action-kit-embed" data-action-tags="organizing,coalitions,campaigns" data-limit="3" data-show-link="true"></div>
+
+                    <h3 class="article-divider">Bottom Line</h3>
+                    <p class="author-bio"><em>No Shortcuts</em> is a reminder that transformational wins are built, not bought. If your campaign is stuck in a cycle of reactive protests or staff-driven messaging, McAlevey offers a roadmap back to the slow, relational work of majority-organizing. Use it to reset strategy sessions and recommit to building power that lasts.</p>
+                <div class="article-back-link">
+                    <a href="../resources.html" class="cta-button">← Back to Resources</a>
+                </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

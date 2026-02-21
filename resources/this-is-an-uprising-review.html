@@ -12,6 +12,9 @@
     <header class="site-header">
         <div class="header-container">
             <a href="../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -19,6 +22,8 @@
                     <li><a href="../programs.html">Our Programs</a></li>
                     <li><a href="../resources.html" class="active">Resources</a></li>
                     <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,32 +44,18 @@
                     <p>The Englers' central argument is that the most successful movements in history have seamlessly blended the strengths of two distinct traditions. On one side is "structure-based" organizing, which focuses on building a deep base of support over time through methodical, one-on-one relationship building. On the other is "mass mobilization," which uses moments of disruptive, often spontaneous, protest to create political crises that force the public and the political establishment to pay attention. The authors argue that a movement needs both: the disruptive power of protest to create moments of opportunity, and the organizational structure to seize those moments and translate them into policy change.</p>
 
                     <h3 class="article-divider">Key Concepts for Modern Activists</h3>
-                    <p>The book is rich with actionable concepts that can be applied to almost any campaign.</p>
-                    <ul class="article-list">
-                        <li>
-                            <h4>The Pillars of Support</h4>
-                            <p>This is a critical strategic tool for understanding how power operates. The Englers argue that even the most entrenched regimes or powerful corporations do not rule through force alone; they rely on the active or passive cooperation of various institutions, or "pillars of support." These can include the police, the media, business leaders, religious institutions, and the bureaucracy. The goal of a strategic nonviolent campaign is not just to protest against the target, but to systematically identify these pillars and work to erode their support, causing the target's base of power to crumble.</p>
-                        </li>
-                        <li>
-                            <h4>The Specter of Disruption and the Political Crisis</h4>
-                            <p>Mass protest, particularly when it is disruptive (e.g., blocking traffic, sit-ins, boycotts), does more than just raise awareness. It creates a political crisis. It forces a situation where the status quo is no longer tenable and decision-makers are compelled to respond. The authors show how even the *threat* of disruption can be a powerful bargaining chip, giving organizers leverage in negotiations that they would not otherwise have.</p>
-                        </li>
-                        <li>
-                            <h4>The Whirlwind and the Art of Escalation</h4>
-                            <p>The book describes the "whirlwind" as that rare, electrifying moment when a movement suddenly captures the public imagination and explodes in size. While these moments can feel spontaneous, the Englers show that they are often the result of years of patient organizing. They also emphasize the importance of strategic escalation. A successful campaign doesn't start with its most disruptive tactic; it builds pressure over time through a sequence of actions that become progressively more confrontational, giving the target multiple opportunities to concede before the conflict reaches its peak.</p>
-                        </li>
-                    </ul>
+                    <p>Instead of handing us a checklist, the Englers offer vivid concepts. The “pillars of support” frame teaches us to see power as relational; topple the police union’s quiet backing or a bank’s financing stream and the regime wobbles. The “specter of disruption” explains why even the threat of a mass sit-in can bend decision-makers—they fear political crisis more than angry press releases. And the “whirlwind” captures that electric moment when a movement grows overnight; it feels spontaneous, but the book shows how careful escalation primes the pump so a single spark becomes a storm.</p>
 
                     <h3 class="article-divider">How to Leverage for Effective Change Today</h3>
-                    <p>The Englers' work provides a practical toolkit for modern movements:</p>
-                    <ul>
-                        <li><strong>Map Your Pillars:</strong> Before launching a campaign, create a detailed map of your target's pillars of support. Which institutions are most critical to their power? Which are the most vulnerable to pressure? Design your tactics specifically to win over or neutralize these key pillars.</li>
-                        <li><strong>Embrace the Hybrid Model:</strong> Don't see your work as either "organizing" or "protesting." Do both. Use structure-based organizing to build a dedicated base of activists, and then mobilize that base for moments of disruptive action that can shift the political weather.</li>
-                        <li><strong>Plan for the Whirlwind:</strong> Even if a mass uprising seems far off, your organization can prepare for it. Train your members in nonviolent discipline, build relationships with a wide range of allies, and have a clear set of demands ready. When a moment of crisis hits, you will be prepared to lead.</li>
-                    </ul>
+                    <p>On the practical side, the Englers urge us to map pillars before the first chant. Which institutions hold up your opponent, and how will each tactic pry at a different beam? They ask us to embrace the hybrid—spending our weekdays building deep structure and our weekends welcoming the whirlwind. And they remind us to prepare for those sudden moments: train your people, clarify demands, line up allies, so that when history cracks open you’re ready to pour through.</p>
+
+                    <div class="action-kit-embed" data-action-tags="direct-action,campaigns,community" data-limit="3" data-show-link="true"></div>
 
                     <h3 class="article-divider">The Bottom Line</h3>
                     <p class="author-bio">*This Is an Uprising* is an incredibly optimistic and empowering read. It demystifies the process of mass mobilization and provides a clear, evidence-based argument for the power of strategic nonviolence. It moves beyond abstract hope and offers a concrete methodology for how ordinary people, by acting together in disruptive and strategic ways, can challenge the most powerful interests in the world and win. It is a must-read for anyone who believes in the power of the people to shape their own destiny.</p>
+                <div class="article-back-link">
+                    <a href="../resources.html" class="cta-button">← Back to Resources</a>
+                </div>
                 </div>
             </section>
         </article>
@@ -75,6 +66,18 @@
             <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
 
 </body>
 </html>

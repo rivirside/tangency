@@ -113,6 +113,7 @@
                     <li><a href="programs.html">Our Programs</a></li>
                     <li><a href="resources.html" class="active">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
                     <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
@@ -140,6 +141,7 @@
                 </div>
                 <div class="program-tabs" role="tablist" aria-label="Resource Categories">
                     <button id="tab-articles" class="tab-link active" role="tab" aria-selected="true" aria-controls="panel-articles">Articles & Guides</button>
+                    <button id="tab-action-kit" class="tab-link" role="tab" aria-selected="false" aria-controls="panel-action-kit">Action Kits</button>
                     <button id="tab-books" class="tab-link" role="tab" aria-selected="false" aria-controls="panel-books">Book Recommendations</button>
                     <button id="tab-general" class="tab-link" role="tab" aria-selected="false" aria-controls="panel-general">General Resources</button>
                 </div>
@@ -228,6 +230,21 @@
                                     </div>
                                 </a>
                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Kit Panel -->
+                    <div id="panel-action-kit" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-action-kit" hidden>
+                        <p class="section-intro left-aligned" style="text-align:center;">Ready-made mini projects, agendas, and templates you can drop straight into your organization. Filter by focus, search keywords, or browse everything to stock your toolkit.</p>
+                        <div class="action-kit-section">
+                            <div class="action-kit-controls">
+                                <div class="action-kit-filter-chips" data-action-kit-filters></div>
+                                <div class="action-kit-search">
+                                    <input type="search" placeholder="Search the Action Kit..." aria-label="Search Action Kit items" data-action-kit-search>
+                                    <div class="action-kit-count" data-action-kit-count>Loading kits...</div>
+                                </div>
+                            </div>
+                            <div class="action-kit-grid" data-action-kit-grid></div>
                         </div>
                     </div>
 
@@ -386,6 +403,7 @@
                     <li><a href="programs.html">Our Programs</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div>
@@ -406,6 +424,8 @@
             toggle.setAttribute('aria-expanded', open);
         });
     </script>
+
+    <script src="scripts/action-kit.js"></script>
 
     <script>
         (function () {

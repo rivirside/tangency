@@ -29,6 +29,7 @@
                     <li><a href="programs.html" class="active">Our Programs</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
                     <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
@@ -75,17 +76,70 @@
                                  <img src="images/aster-art.png" alt="Artistic photo of Aster.">
                              </div>
                         </article>
-                        <div class="featured-item" style="margin-top:30px;">
-                            <h3 style="margin-top:0;">How to Apply</h3>
-                            <ol style="padding-left:20px; line-height:2.2; margin-bottom:0;">
-                                <li>Email <a href="mailto:contact@activisthq.org">contact@activisthq.org</a> with subject line <strong>"Scholarship Inquiry"</strong></li>
-                                <li>Include a short bio (1–2 paragraphs) describing your activist work and goals</li>
-                                <li>Tell us how the scholarship would support your education and organizing</li>
-                                <li>We review applications on a rolling basis and respond within two weeks</li>
-                            </ol>
-                            <div style="text-align:center; margin-top:30px;">
-                                <a href="mailto:contact@activisthq.org?subject=Scholarship%20Inquiry" class="cta-button">Apply Now</a>
-                            </div>
+                        <div class="application-section">
+                            <h3>Scholarship Application Snapshot</h3>
+                            <p>Share the essentials about your activism, academic journey, and what support would help you keep doing the work. Once you complete the form, select <strong>Create Email Draft</strong> to open a pre-filled message addressed to our team.</p>
+
+                            <form class="application-form" data-recipient="contact@activisthq.org" data-subject-template="Scholarship Application - {name}">
+                                <div class="form-grid">
+                                    <div class="form-field">
+                                        <label for="scholar-name">Full Name*</label>
+                                        <input id="scholar-name" name="full_name" type="text" required data-label="Full Name" data-applicant-name="true" placeholder="Aster Counihan">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="scholar-pronouns">Pronouns</label>
+                                        <input id="scholar-pronouns" name="pronouns" type="text" data-label="Pronouns" placeholder="she/they">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="scholar-email">Email*</label>
+                                        <input id="scholar-email" name="email" type="email" required data-label="Email" placeholder="you@example.org">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="scholar-phone">Phone</label>
+                                        <input id="scholar-phone" name="phone" type="tel" data-label="Phone" placeholder="(555) 555-5555">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="scholar-school">School / Program*</label>
+                                        <input id="scholar-school" name="school" type="text" required data-label="School / Program" placeholder="University + degree focus">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="scholar-graduation">Graduation / Program Timeline</label>
+                                        <input id="scholar-graduation" name="timeline" type="text" data-label="Graduation or Program Timeline" placeholder="Expected May 2026">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="scholar-activism">Activism Focus & Impact*</label>
+                                    <textarea id="scholar-activism" name="activism_focus" required data-label="Activism Focus & Impact" placeholder="Share the communities you organize with and work you are leading."></textarea>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="scholar-support">How this scholarship will support you*</label>
+                                    <textarea id="scholar-support" name="support" required data-label="How Tangency can support you" placeholder="Tell us what resources or costs this scholarship would cover."></textarea>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="scholar-links">Links / Attachments</label>
+                                    <textarea id="scholar-links" name="links" data-label="Relevant Links or Attachment Notes" placeholder="Social profiles, press, or note that you'll attach a transcript/resume in the email."></textarea>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="scholar-request">Funding Amount Requested</label>
+                                    <input id="scholar-request" name="funding" type="text" data-label="Funding Request" placeholder="$1,500">
+                                </div>
+
+                                <div class="form-agreement">
+                                    <label>
+                                        <input type="checkbox" id="scholar-terms" data-terms required>
+                                        I have reviewed the <a href="terms.html" target="_blank" rel="noopener">Participation Terms &amp; Conditions</a>.
+                                    </label>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="cta-button create-email">Create Email Draft</button>
+                                    <p class="form-hint">Your default mail app opens with every response. Please attach any documents mentioned before sending.</p>
+                                </div>
+                            </form>
                         </div>
                     </div>
 
@@ -138,6 +192,77 @@
                                 </div>
                             </div>
                         </article>
+
+                        <div class="application-section">
+                            <h3>Micro-Grant Intake</h3>
+                            <p>Tell us about your project, who it serves, and what this funding would unlock. Instead of uploading files here, complete the form and select <strong>Create Email Draft</strong> to generate an email we can reply to with next steps.</p>
+
+                            <form class="application-form" data-recipient="contact@activisthq.org" data-subject-template="Micro-Grant Application - {name}">
+                                <div class="form-grid">
+                                    <div class="form-field">
+                                        <label for="grant-project">Project / Initiative Name*</label>
+                                        <input id="grant-project" name="project_name" type="text" required data-label="Project Name" data-applicant-name="true" placeholder="Food Systems Coalition Resource Hub">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="grant-lead">Primary Contact*</label>
+                                        <input id="grant-lead" name="project_lead" type="text" required data-label="Primary Contact" placeholder="Lead organizer or fiscal sponsor">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="grant-email">Email*</label>
+                                        <input id="grant-email" name="email" type="email" required data-label="Email" placeholder="you@example.org">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="grant-phone">Phone</label>
+                                        <input id="grant-phone" name="phone" type="tel" data-label="Phone" placeholder="(555) 555-5555">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="grant-org">Organization / Fiscal Sponsor</label>
+                                        <input id="grant-org" name="organization" type="text" data-label="Organization or Fiscal Sponsor" placeholder="Optional">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="grant-location">Where the work happens*</label>
+                                        <input id="grant-location" name="location" type="text" required data-label="Project Location" placeholder="City, state, or community">
+                                    </div>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="grant-summary">Project Summary & Community Impact*</label>
+                                    <textarea id="grant-summary" name="summary" required data-label="Project Summary & Impact" placeholder="In 2–3 paragraphs, explain the problem, the people impacted, and your solution."></textarea>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="grant-deliverables">Planned Deliverables / Milestones*</label>
+                                    <textarea id="grant-deliverables" name="deliverables" required data-label="Deliverables & Timeline" placeholder="List major milestones, timeline, and who is responsible."></textarea>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="grant-budget">Budget Snapshot*</label>
+                                    <textarea id="grant-budget" name="budget" required data-label="Budget Snapshot" placeholder="Break down how you would allocate Tangency funds, include other confirmed/pending funding."></textarea>
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="grant-amount">Amount Requested*</label>
+                                    <input id="grant-amount" name="amount" type="text" required data-label="Amount Requested" placeholder="$1,000">
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="grant-links">Links / Attachments</label>
+                                    <textarea id="grant-links" name="links" data-label="Links or Files" placeholder="Decks, budget sheets, press, photo folders, etc. Mention anything you'll attach."></textarea>
+                                </div>
+
+                                <div class="form-agreement">
+                                    <label>
+                                        <input type="checkbox" id="grant-terms" data-terms required>
+                                        I have reviewed the <a href="terms.html" target="_blank" rel="noopener">Participation Terms &amp; Conditions</a>.
+                                    </label>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="button" class="cta-button create-email">Create Email Draft</button>
+                                    <p class="form-hint">An email draft opens with all answers in the body. Please attach any supporting docs before you send.</p>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
                     <div id="panel-training" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-training" hidden>
@@ -268,6 +393,7 @@
                     <li><a href="programs.html">Our Programs</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div>
@@ -312,6 +438,37 @@
                 const targetPanel = document.getElementById(targetPanelId);
                 targetPanel.classList.add('active');
                 targetPanel.hidden = false;
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.application-form').forEach(form => {
+            const trigger = form.querySelector('.create-email');
+            if (!trigger) return;
+
+            trigger.addEventListener('click', () => {
+                if (!form.reportValidity()) {
+                    return;
+                }
+
+                const recipient = form.dataset.recipient || 'contact@activisthq.org';
+                const template = form.dataset.subjectTemplate || 'Tangency Application';
+                const applicantNameField = form.querySelector('[data-applicant-name]');
+                const applicantName = applicantNameField ? applicantNameField.value.trim() : '';
+                const subject = template.replace('{name}', applicantName || 'Applicant');
+
+                const bodySections = [];
+                form.querySelectorAll('[data-label]').forEach(field => {
+                    const value = field.value.trim();
+                    if (!value) return;
+                    const label = field.dataset.label || field.name;
+                    bodySections.push(`${label}:\n${value}`);
+                });
+
+                const bodyContent = bodySections.length ? bodySections.join('\n\n') : 'Thank you for reviewing my application.';
+                const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyContent)}`;
+                window.location.href = mailtoUrl;
             });
         });
     </script>

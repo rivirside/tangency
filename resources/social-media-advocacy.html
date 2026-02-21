@@ -12,6 +12,9 @@
     <header class="site-header">
         <div class="header-container">
             <a href="../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -19,6 +22,8 @@
                     <li><a href="../programs.html">Our Programs</a></li>
                     <li><a href="../resources.html" class="active">Resources</a></li>
                     <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,36 +42,19 @@
                     
                     <h3 class="article-divider">Platform Breakdown</h3>
                     
-                    <ul class="article-list">
-                        <li>
-                            <h4>Twitter (X): The Real-Time Megaphone</h4>
-                            <p><strong>Best for:</strong> Rapid response, live-tweeting events, and public pressure campaigns.</p>
-                            <p>Twitter's power lies in its speed and reach. It's the digital town square where news breaks and conversations with journalists, politicians, and influencers happen in real-time. Hashtag campaigns can trend globally, focusing the world's attention on a single issue. However, the platform's fast pace means content has a short lifespan, and it can be a breeding ground for targeted harassment.</p>
-                        </li>
-                        <li>
-                            <h4>Instagram: The Visual Storyteller</h4>
-                            <p><strong>Best for:</strong> Humanizing a cause, photojournalism, and sharing powerful infographics.</p>
-                            <p>Instagram connects with audiences on an emotional level through compelling visuals. Use high-quality photos, short videos (Reels), and daily updates (Stories) to show the people behind your movement and the real-world impact of your work. While it's fantastic for building a brand and community, its emphasis on visuals makes it less effective for driving traffic to external articles or petitions.</p>
-                        </li>
-                        <li>
-                            <h4>Facebook: The Community Hub</h4>
-                            <p><strong>Best for:</strong> Building local chapters, organizing events, and reaching a broad demographic.</p>
-                            <p>With its massive user base, Facebook remains a powerhouse for community organizing. Facebook Groups are invaluable for creating a dedicated space for your supporters to connect, plan, and discuss issues. The Events feature is second to none for mobilizing people for on-the-ground actions. Its primary weakness is its aging demographic and the often-limited organic reach of Pages.</p>
-                        </li>
-                        <li>
-                            <h4>TikTok: The Viral Engine</h4>
-                             <p><strong>Best for:</strong> Mass awareness campaigns, simplifying complex topics, and reaching Gen Z.</p>
-                            <p>TikTok's algorithm has unparalleled potential to make content go viral, reaching millions of people outside your existing follower base. It's a space for creativity, where complex issues can be broken down into short, engaging, and educational videos. The key is to be authentic and tap into existing trends. The challenge is the platform's fast-moving nature, which requires constant adaptation.</p>
-                        </li>
-                         <li>
-                            <h4>LinkedIn: The Professional Network</h4>
-                            <p><strong>Best for:</strong> Corporate advocacy, policy discussions, and connecting with industry leaders.</p>
-                            <p>Often overlooked by activists, LinkedIn can be a powerful tool for corporate-focused campaigns. It's the ideal platform for calling on companies to improve their practices, sharing in-depth policy analysis, and establishing your organization as a thought leader in a specific field. The tone is more formal, making it less suitable for grassroots protest messaging.</p>
-                        </li>
-                    </ul>
+                    <p><strong>Twitter (X) is your real-time megaphone.</strong> Use it for rapid response, live commentary, and public pressure. Hashtags can trend globally in minutes, but posts die quickly and trolls lurk, so plan for both speed and moderation.</p>
+                    <p><strong>Instagram is the visual storyteller.</strong> Lean on photos, reels, and stories to humanize your cause, introduce organizers, and show the offline impact. It’s great for community-building, less so for driving clicks away from the app.</p>
+                    <p><strong>Facebook remains the community hub.</strong> Groups and Events still excel at logistics—chapter meetings, volunteer signups, neighborhood updates—even if organic Page reach has dipped.</p>
+                    <p><strong>TikTok is the viral engine.</strong> Bite-sized explainers and trend-aware videos can reach audiences beyond your base. Authenticity matters; so does stamina, because the algorithm rewards frequent experimentation.</p>
+                    <p><strong>LinkedIn is the professional network.</strong> Perfect for corporate accountability campaigns, policy explainers, and thought-leadership pieces that need to land in boardrooms more than in the streets.</p>
+
+                    <div class="action-kit-embed" data-action-tags="communications,digital,press" data-limit="3" data-show-link="true"></div>
 
                     <h3 class="article-divider">The Bottom Line</h3>
                     <p class="author-bio">There is no single "best" platform for activism. The most effective strategy is often a multi-platform approach that leverages the unique strengths of each. Use Twitter for the breaking news, Instagram for the human story, Facebook for the community logistics, and TikTok for mass awareness. By understanding the tools at your disposal, you can ensure your message reaches the right people, in the right place, at the right time.</p>
+                <div class="article-back-link">
+                    <a href="../resources.html" class="cta-button">← Back to Resources</a>
+                </div>
                 </div>
             </section>
         </article>
@@ -77,6 +65,18 @@
             <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
 
 </body>
 </html>
