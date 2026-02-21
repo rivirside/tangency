@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power Mapping Workbook - Tangency Action Kit</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+        :root {
+            --primary: #111;
+            --secondary: #555;
+            --accent: #000;
+            --light-gray: #f4f4f4;
+            --border-color: #ddd;
+            --font-main: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+
+        /* RESET & PRINT SETUP */
+        * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        body { margin: 0; padding: 0; background: #e0e0e0; font-family: var(--font-main); color: var(--primary); }
+        
+        @page {
+            size: 8.5in 11in;
+            margin: 0; /* We handle margins in the .page container */
+        }
+
+        .page {
+            width: 8.5in;
+            height: 11in;
+            background: white;
+            position: relative;
+            margin: 0 auto 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            page-break-after: always;
+        }
+
+        @media print {
+            body { background: white; }
+            .page { margin: 0; box-shadow: none; border: none; }
+        }
+
+        /* UTILITIES */
+        .content-area { padding: 0.75in; height: 100%; display: flex; flex-direction: column; }
+        .row { display: flex; gap: 20px; }
+        .col { flex: 1; }
+        .mt-4 { margin-top: 1.5rem; }
+        .mb-2 { margin-bottom: 0.5rem; }
+        .text-center { text-align: center; }
+        .uppercase { text-transform: uppercase; letter-spacing: 0.05em; }
+
+        /* HEADER & FOOTER (Internal Pages) */
+        .page-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        .page-header h2 { margin: 0; font-size: 14px; text-transform: uppercase; font-weight: 700; }
+        .page-header span { font-size: 10px; color: var(--secondary); }
+
+        .page-footer {
+            position: absolute;
+            bottom: 0.5in;
+            left: 0.75in;
+            right: 0.75in;
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 9px;
+            color: var(--secondary);
+        }
+
+        /* --- PAGE 1: COVER --- */
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: var(--primary);
+            color: white;
+            padding: 1in;
+        }
+        .cover-branding { font-size: 14px; text-transform: uppercase; letter-spacing: 0.2em; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 20px; }
+        .cover-title h1 { font-family: var(--font-serif); font-size: 64px; margin: 0; line-height: 1.1; }
+        .cover-title p { font-size: 18px; color: #ccc; margin-top: 20px; font-weight: 300; max-width: 400px; }
+        .cover-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 30px; font-size: 12px; }
+        .meta-item strong { display: block; text-transform: uppercase; color: #888; margin-bottom: 5px; font-size: 10px; }
+
+        /* --- WORKSHEET STYLES --- */
+        .input-group { margin-bottom: 20px; }
+        .input-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; margin-bottom: 5px; color: var(--secondary); }
+        .input-box { 
+            background: var(--light-gray); 
+            border: 1px solid transparent; 
+            padding: 10px; 
+            min-height: 40px; 
+            border-radius: 4px; 
+        }
+        /* Make lines for writing */
+        .write-lines {
+            background-image: linear-gradient(transparent 95%, #ccc 95%);
+            background-size: 100% 30px;
+            line-height: 30px;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Table */
+        .roster-table { width: 100%; border-collapse: collapse; }
+        .roster-table th { text-align: left; font-size: 10px; text-transform: uppercase; color: var(--secondary); border-bottom: 2px solid var(--primary); padding: 5px 0; }
+        .roster-table td { border-bottom: 1px solid var(--border-color); height: 35px; vertical-align: bottom; font-size: 12px; color: var(--primary); }
+
+        /* Strategy Grid */
+        .matrix-container {
+            position: relative;
+            height: 500px;
+            border: 2px solid var(--primary);
+            display: flex;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+        .quadrant {
+            width: 50%;
+            height: 50%;
+            padding: 15px;
+            position: relative;
+            border: 1px solid var(--border-color); /* Light grid lines inside */
+        }
+        /* Thick grid lines for axes */
+        .quadrant:nth-child(1) { border-right: 2px solid var(--primary); border-bottom: 2px solid var(--primary); border-top: none; border-left: none; }
+        .quadrant:nth-child(2) { border-bottom: 2px solid var(--primary); border-right: none; border-top: none; border-left: none; }
+        .quadrant:nth-child(3) { border-right: 2px solid var(--primary); border-bottom: none; border-top: none; border-left: none; }
+        .quadrant:nth-child(4) { border: none; }
+
+        .quad-label { font-family: var(--font-serif); font-size: 18px; font-weight: 700; margin-bottom: 5px; display: block; }
+        .quad-desc { font-size: 10px; color: var(--secondary); line-height: 1.4; }
+        
+        /* Axis Labels */
+        .axis-label { position: absolute; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: white; padding: 0 5px; }
+        .axis-y-top { top: -10px; left: 50%; transform: translateX(-50%); }
+        .axis-y-bottom { bottom: -10px; left: 50%; transform: translateX(-50%); }
+        .axis-x-left { top: 50%; left: -35px; transform: translateY(-50%) rotate(-90deg); }
+        .axis-x-right { top: 50%; right: -35px; transform: translateY(-50%) rotate(-90deg); }
+
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1: COVER -->
+    <div class="page cover-page">
+        <div class="cover-branding">Tangency Foundation Action Kit</div>
+        <div class="cover-title">
+            <h1>Power Mapping<br>Lab</h1>
+            <p>A strategic workbook for identifying decision-makers, mapping influence, and assigning campaign ownership.</p>
+        </div>
+        <div class="cover-meta">
+            <div class="meta-item">
+                <strong>Intended For</strong>
+                Campaign Strategists & Organizers
+            </div>
+            <div class="meta-item">
+                <strong>Est. Time</strong>
+                90 Minutes
+            </div>
+            <div class="meta-item">
+                <strong>Version</strong>
+                1.0 (2025 Edition)
+            </div>
+            <div class="meta-item">
+                <strong>License</strong>
+                Creative Commons BY-NC-SA 4.0
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: BRAINSTORMING ROSTER -->
+    <div class="page">
+        <div class="content-area">
+            <div class="page-header">
+                <h2>01. Brainstorming Roster</h2>
+                <span>Step 1 of 3</span>
+            </div>
+            
+            <p style="font-size: 12px; color: #666; margin-bottom: 2rem;">
+                <strong>Instructions:</strong> Before mapping, list everyone who might care about your issue. 
+                Don't self-edit—get them all down. Mark their potential category (Ally/Opponent/Target).
+            </p>
+
+            <table class="roster-table">
+                <thead>
+                    <tr>
+                        <th style="width: 40%">Name / Organization</th>
+                        <th style="width: 20%">Category</th>
+                        <th style="width: 40%">Why do they care? (Notes)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Generate 16 empty rows -->
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                    <tr><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+
+            <div class="page-footer">
+                <span>Power Mapping Lab</span>
+                <span>Page 1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: TARGET PROFILE -->
+    <div class="page">
+        <div class="content-area">
+            <div class="page-header">
+                <h2>02. Target Analysis Profile</h2>
+                <span>Step 2 of 3</span>
+            </div>
+
+            <div class="row" style="margin-bottom: 30px;">
+                <div style="width: 1.5in; height: 1.5in; background: #eee; display: flex; align-items: center; justify-content: center; color: #999; font-size: 10px; border: 1px dashed #ccc;">
+                    ATTACH PHOTO
+                </div>
+                <div class="col" style="padding-left: 20px;">
+                    <div class="input-group">
+                        <label class="input-label">Primary Target Name</label>
+                        <div class="input-box" style="height: 40px;"></div>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Title / Role</label>
+                        <div class="input-box" style="height: 40px;"></div>
+                    </div>
+                    <div class="input-group">
+                        <label class="input-label">Decision Power (What specific demand can they grant?)</label>
+                        <div class="input-box" style="height: 40px;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">1. Self-Interest (What do they want/need?)</label>
+                <div class="input-box" style="height: 120px;">
+                    <div class="write-lines"></div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">2. Influencers (Who do they listen to?)</label>
+                <div class="input-box" style="height: 120px;">
+                    <div class="write-lines"></div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">3. Pressure Points (Events, elections, contracts)</label>
+                <div class="input-box" style="height: 120px;">
+                    <div class="write-lines"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <span>Power Mapping Lab</span>
+                <span>Page 2</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: STRATEGY MATRIX -->
+    <div class="page">
+        <div class="content-area">
+            <div class="page-header">
+                <h2>03. Strategy Selection Matrix</h2>
+                <span>Step 3 of 3</span>
+            </div>
+
+            <p style="font-size: 12px; color: #666;">
+                <strong>Instructions:</strong> Place your stakeholders on this grid. Your strategy for each person depends on which quadrant they land in.
+            </p>
+
+            <div class="matrix-container">
+                <!-- Labels -->
+                <div class="axis-label axis-y-top">High Influence</div>
+                <div class="axis-label axis-y-bottom">Low Influence</div>
+                <div class="axis-label axis-x-left">Oppose</div>
+                <div class="axis-label axis-x-right">Support</div>
+
+                <!-- Q1 Top Left -->
+                <div class="quadrant">
+                    <span class="quad-label">Opponents</span>
+                    <span class="quad-desc">High Influence / Oppose<br><strong>Tactic: Isolate & Pressure</strong></span>
+                </div>
+                <!-- Q2 Top Right -->
+                <div class="quadrant">
+                    <span class="quad-label">Champions</span>
+                    <span class="quad-desc">High Influence / Support<br><strong>Tactic: Activate & Lead</strong></span>
+                </div>
+                <!-- Q3 Bottom Left -->
+                <div class="quadrant">
+                    <span class="quad-label">Detractors</span>
+                    <span class="quad-desc">Low Influence / Oppose<br><strong>Tactic: Monitor</strong></span>
+                </div>
+                <!-- Q4 Bottom Right -->
+                <div class="quadrant">
+                    <span class="quad-label">Allies</span>
+                    <span class="quad-desc">Low Influence / Support<br><strong>Tactic: Educate & Empower</strong></span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label class="input-label">Next Steps / Assignments</label>
+                <div class="input-box" style="height: 150px;">
+                    <div class="write-lines"></div>
+                </div>
+            </div>
+
+            <div class="page-footer">
+                <span>Power Mapping Lab</span>
+                <span>Page 3</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
