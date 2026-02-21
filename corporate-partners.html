@@ -7,7 +7,7 @@
     <!-- Link to existing stylesheet -->
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .partner-logo-grid {
             display: flex;
@@ -50,13 +50,17 @@
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="literacy.html">Activism Literacy</a></li>
                     <li><a href="programs.html">Our Programs</a></li>
-                    <li><a href="articles.html">Articles</a></li>
+                    <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,13 +79,16 @@
 
                 <article class="featured-item" style="background: white; padding: 40px; border-radius: 12px;">
                     <h2 style="text-align: center;">Turn Your Passion into Matched Donations</h2>
-                    <p class="section-intro left-aligned">The Tangency Foundation is a registered 501(c)(3) nonprofit organization on corporate giving platforms like <strong>Benevity</strong>, which serves companies like Google, Starbucks, and many more. This makes it easy for employees to amplify their impact. When you donate or volunteer with us and log your activity through your employer's portal, your company provides a matching financial contribution, doubling your support for our mission.</p>
+                    <p class="section-intro left-aligned">The Tangency Foundation is listed on <strong>Benevity</strong>, the corporate giving platform used by thousands of companies including Google and Starbucks. If your employer uses Benevity, you can donate or log volunteer hours directly — and your company may provide a matching contribution.</p>
 
                     <div class="partner-logo-grid">
                         <img src="images/starbucks-logo.png" alt="Starbucks Logo">
                         <img src="images/google-logo.png" alt="Google Logo">
                         <img src="images/benevity-logo.png" alt="Benevity Logo">
                     </div>
+                    <p style="text-align:center; font-size:0.85rem; color:#6c757d; margin-top:-20px;">
+                        Companies that use Benevity for employee giving programs
+                    </p>
                 </article>
 
                 <article class="featured-item dynamic-layout" style="margin-top: 50px;">
@@ -130,10 +137,40 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-container">
-            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Tangency Foundation</div>
+                <p class="footer-tagline">A crucial point of tangency between ideas, movements, and resources.</p>
+                <a href="https://instagram.com/ActivismHQ" target="_blank" class="footer-social">Instagram @ActivismHQ</a>
+            </div>
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="literacy.html">Activism Literacy</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support Us</h4>
+                <p>We're a 501(c)(3) on Benevity — your employer may match donations.</p>
+                <a href="https://benevity.com/causes/840-852519445" class="cta-button" style="margin-top:15px; padding:12px 24px; font-size:0.9rem;" target="_blank">Donate via Benevity</a>
+                <p style="margin-top:20px;"><a href="mailto:contact@activisthq.org" class="footer-email">contact@activisthq.org</a></p>
+            </div>
         </div>
+        <div class="footer-bottom">&copy; 2025 Tangency Foundation. All Rights Reserved.</div>
     </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
 
 </body>
 </html>

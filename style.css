@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #1a535c;
-    --secondary-color: #4ecdc4;
-    --accent-color: #ff6b6b;
+    --primary-color: #0d3d45;
+    --secondary-color: #3abcb4;
+    --accent-color: #e85d5d;
     --background-color: #f8f9fa;
     --text-color: #343a40;
     --light-gray: #e9ecef;
@@ -78,11 +78,15 @@ h4 {
 
 
 .page-header {
-    padding: 100px 20px 80px 20px;
+    padding: 120px 20px 80px;
     text-align: center;
-    background-color: #ffffff;
-    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(135deg, var(--primary-color), #1a5e6d);
+    color: white;
 }
+
+.page-header .page-title,
+.page-header .section-intro { color: white; }
+.page-header .section-intro { opacity: 0.85; }
 
 .section-intro {
     font-size: 1.2rem;
@@ -176,14 +180,14 @@ h4 {
     font-size: 1rem;
     margin-top: 25px;
     border: none;
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 4px 15px rgba(232, 93, 93, 0.3);
     transition: all 0.3s ease;
 }
 
 .cta-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-    background-color: #ff7878;
+    box-shadow: 0 6px 20px rgba(232, 93, 93, 0.4);
+    background-color: #cf4f4f;
     border-bottom: none;
 }
 
@@ -239,14 +243,7 @@ h4 {
     font-size: 1.5rem;
 }
 
-/* --- Footer --- */
-.site-footer {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-    padding: 40px 0;
-    text-align: center;
-    font-size: 1rem;
-}
+/* --- Footer — see expanded styles below --- */
 
 /* --- Program Tabs UI --- */
 .program-tabs {
@@ -569,4 +566,247 @@ h4 {
     font-size: 1.1rem !important;
     line-height: 1.8;
     border-radius: 0 8px 8px 0;
+}
+
+/* --- Mobile Hamburger Nav --- */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* --- Donate button in nav --- */
+.nav-donate {
+    background-color: var(--accent-color);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+.nav-donate::after {
+    display: none !important;
+}
+
+.nav-donate:hover {
+    background-color: #cf4f4f;
+    opacity: 1;
+}
+
+/* --- Hero dual CTAs --- */
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.cta-button-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: white !important;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.cta-button-outline:hover {
+    background-color: white;
+    color: var(--primary-color) !important;
+    transform: translateY(-5px);
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.stat-item { text-align: center; }
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Scroll-in Animations --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* --- Expanded Footer --- */
+.site-footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+}
+
+.footer-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.footer-tagline {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.footer-social {
+    display: inline-block;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.footer-social:hover { opacity: 0.8; }
+
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 16px;
+    color: white;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li { margin-bottom: 10px; }
+
+.footer-links a {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover { color: white; }
+
+.footer-email {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.footer-email:hover { opacity: 0.8; }
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* Support text in footer */
+.site-footer p {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 12px;
+}
+
+/* --- Mobile Responsive Styles --- */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(255,255,255,0.97);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid var(--border-color);
+        padding: 20px;
+    }
+
+    .main-nav.open {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .main-nav ul li:last-child a {
+        border-bottom: none;
+        margin-top: 10px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .stats-bar {
+        gap: 30px;
+    }
 }

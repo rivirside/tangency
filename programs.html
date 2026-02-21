@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Programs | Tangency Foundation</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* This rule specifically targets the podcast episode images to make them square */
         #panel-podcast .episode-card img {
@@ -19,6 +19,9 @@
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -26,6 +29,7 @@
                     <li><a href="programs.html" class="active">Our Programs</a></li>
                     <li><a href="resources.html">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,7 +59,7 @@
                                 <p>Our scholarships are designed for student activists who embody the principles of Activism Literacy. We support individuals who are not only passionate about change but are also committed to developing the critical skills needed for effective, sustainable, and impactful social action. By easing the financial burden of higher education, we empower these emerging leaders to deepen their knowledge while continuing to organize for systemic change in their communities.</p>
                             </div>
                             <div class="featured-visual">
-                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop" alt="Students at a graduation ceremony.">
+                                <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Students at a graduation ceremony.">
                             </div>
                         </article>
                          <article class="featured-item special-layout">
@@ -71,14 +75,33 @@
                                  <img src="images/aster-art.png" alt="Artistic photo of Aster.">
                              </div>
                         </article>
-                        <div style="text-align: center; margin-top: 40px;">
-                            <a href="contact.html" class="cta-button">Inquire About Scholarships</a>
+                        <div class="featured-item" style="margin-top:30px;">
+                            <h3 style="margin-top:0;">How to Apply</h3>
+                            <ol style="padding-left:20px; line-height:2.2; margin-bottom:0;">
+                                <li>Email <a href="mailto:contact@activisthq.org">contact@activisthq.org</a> with subject line <strong>"Scholarship Inquiry"</strong></li>
+                                <li>Include a short bio (1–2 paragraphs) describing your activist work and goals</li>
+                                <li>Tell us how the scholarship would support your education and organizing</li>
+                                <li>We review applications on a rolling basis and respond within two weeks</li>
+                            </ol>
+                            <div style="text-align:center; margin-top:30px;">
+                                <a href="mailto:contact@activisthq.org?subject=Scholarship%20Inquiry" class="cta-button">Apply Now</a>
+                            </div>
                         </div>
                     </div>
 
                     <div id="panel-grants" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-grants" hidden>
                         <p class="section-intro left-aligned">Our micro-grants are designed to be accessible and impactful, providing the seed funding that grassroots projects need to get off the ground. We look to fund projects with a clear goal, an actionable plan, and a passionate lead.</p>
-                        
+
+                        <div class="featured-item" style="margin-bottom:30px; background:white; padding:30px; border-radius:12px; border:1px solid var(--border-color);">
+                            <h3 style="margin-top:0;">Who Can Apply</h3>
+                            <ul style="padding-left:20px; margin-bottom:0; line-height:2;">
+                                <li>Grassroots projects at any stage — from idea to early implementation</li>
+                                <li>Any cause area aligned with social, environmental, or community justice</li>
+                                <li>US-based projects preferred; grants typically range from <strong>$250–$1,500</strong></li>
+                                <li>No minimum org size — individual organizers welcome</li>
+                            </ul>
+                        </div>
+
                         <article class="featured-item">
                             <div class="grant-details">
                                 <h4>Case Study: Food Systems Coalition of Greater Gainesville (FSC)</h4>
@@ -89,6 +112,7 @@
                                 <blockquote>
                                     Through this proposed project, we seek to expand the reach and transparency of the FSC by developing a publicly accessible website where informational resources relevant to the food systems of North Central Florida can be stored and shared amongst our community.
                                 </blockquote>
+                                <p><em>"The FSC website launched successfully and now serves as a public resource hub for food system stakeholders across North Central Florida."</em></p>
 
                                 <div class="offerings-grid" style="margin-top: 30px; gap: 20px;">
                                     <div class="offering-item-link" style="text-align: left; padding: 25px;">
@@ -198,6 +222,12 @@
                             <a href="https://open.spotify.com/show/1ug6TLV8HHGVJ0FJtiGoid" class="podcast-btn spotify" target="_blank">Spotify</a>
                         </div>
 
+                        <iframe style="border-radius:12px; margin-bottom:30px; display:block;"
+                            src="https://open.spotify.com/embed/show/1ug6TLV8HHGVJ0FJtiGoid?utm_source=generator"
+                            width="100%" height="152" frameBorder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                            loading="lazy"></iframe>
+
                         <h3 style="text-align: center; margin-top: 50px; font-size: 1.8rem; color: var(--primary-color);">Featured Episodes</h3>
                         <div class="episode-grid">
                             <div class="episode-card">
@@ -224,10 +254,40 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-container">
-            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Tangency Foundation</div>
+                <p class="footer-tagline">A crucial point of tangency between ideas, movements, and resources.</p>
+                <a href="https://instagram.com/ActivismHQ" target="_blank" class="footer-social">Instagram @ActivismHQ</a>
+            </div>
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="literacy.html">Activism Literacy</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support Us</h4>
+                <p>We're a 501(c)(3) on Benevity — your employer may match donations.</p>
+                <a href="https://benevity.com/causes/840-852519445" class="cta-button" style="margin-top:15px; padding:12px 24px; font-size:0.9rem;" target="_blank">Donate via Benevity</a>
+                <p style="margin-top:20px;"><a href="mailto:contact@activisthq.org" class="footer-email">contact@activisthq.org</a></p>
+            </div>
         </div>
+        <div class="footer-bottom">&copy; 2025 Tangency Foundation. All Rights Reserved.</div>
     </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
 
     <script>
         const tabs = document.querySelectorAll('.tab-link');

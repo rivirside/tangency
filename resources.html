@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources | Tangency Foundation</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* Styles for the book recommendation grid */
         .book-grid {
@@ -75,6 +75,27 @@
             color: var(--primary-color);
             margin-top: 0;
         }
+
+        /* Search styles */
+        .resource-search-wrapper { margin-bottom: 30px; }
+        #resource-search {
+            width: 100%; padding: 14px 20px; font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            border: 2px solid var(--border-color); border-radius: 8px;
+            box-sizing: border-box; transition: border-color 0.2s ease;
+        }
+        #resource-search:focus { outline: none; border-color: var(--secondary-color); }
+        .search-results-meta { color: #6c757d; font-size: 0.95rem; margin-bottom: 20px; }
+        .search-results-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px;
+        }
+        .result-category-tag {
+            display: inline-block; font-size: 0.72rem; font-weight: 700;
+            letter-spacing: 0.07em; text-transform: uppercase;
+            padding: 3px 8px; border-radius: 4px;
+            background: var(--light-gray); color: #555; margin-bottom: 10px;
+        }
+        .no-results-msg { text-align:center; color:#6c757d; padding:40px 0; }
     </style>
 </head>
 <body>
@@ -82,6 +103,9 @@
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -89,6 +113,7 @@
                     <li><a href="programs.html">Our Programs</a></li>
                     <li><a href="resources.html" class="active">Resources</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
                 </ul>
             </nav>
         </div>
@@ -100,8 +125,19 @@
             <p class="section-intro">A curated collection of articles, guides, and tools to support your activism journey.</p>
         </div>
 
+        <div class="resource-search-wrapper container" style="padding-top:30px;">
+            <input type="search" id="resource-search"
+                placeholder="Search all resources — books, articles, guides..."
+                autocomplete="off" aria-label="Search all resources">
+        </div>
+
         <section class="content-section">
             <div class="container">
+                <div id="search-results" hidden>
+                    <p class="search-results-meta"></p>
+                    <div class="search-results-grid"></div>
+                    <p class="no-results-msg" hidden>No resources found. Try a different search.</p>
+                </div>
                 <div class="program-tabs" role="tablist" aria-label="Resource Categories">
                     <button id="tab-articles" class="tab-link active" role="tab" aria-selected="true" aria-controls="panel-articles">Articles & Guides</button>
                     <button id="tab-books" class="tab-link" role="tab" aria-selected="false" aria-controls="panel-books">Book Recommendations</button>
@@ -112,7 +148,7 @@
                     <!-- Articles & Guides Panel -->
                     <div id="panel-articles" class="tab-panel active" role="tabpanel" tabindex="0" aria-labelledby="tab-articles">
                         <div class="article-grid">
-                            <div class="article-card">
+                            <div class="article-card" data-searchable data-category="Article" data-search="10 Books to Serve as a Jumping Off Point for Any Activist Catherine Stolz books for activists">
                                 <a href="resources/10-books-for-activists.html" class="article-card-link">
                                     <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2874&auto=format&fit=crop" alt="A collection of old books on a shelf." class="article-image">
                                     <div class="article-card-content">
@@ -122,7 +158,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="article-card">
+                            <div class="article-card" data-searchable data-category="Article" data-search="Toolkit How to Plan a Strategic Campaign strategic planning activists">
                                 <a href="resources/strategic-campaign-planning.html" class="article-card-link">
                                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="A person drawing a strategy diagram on a glass wall." class="article-image">
                                     <div class="article-card-content">
@@ -132,23 +168,63 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="article-card">
+                            <div class="article-card" data-searchable data-category="Article" data-search="Guide Building Sustaining a Coalition community organizing coalition building">
                                 <a href="resources/building-coalitions-guide.html" class="article-card-link">
                                     <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop" alt="A diverse group of people in a planning meeting." class="article-image">
                                     <div class="article-card-content">
-                                        <h3 class="article-title">Guide: Building & Sustaining a Coalition</h3>
+                                        <h3 class="article-title">Guide: Building &amp; Sustaining a Coalition</h3>
                                         <p class="article-excerpt">Lasting change is built together. Learn the essential skills required to build broad coalitions and foster a sense of shared ownership over a movement.</p>
                                         <p class="article-meta">Resource | June 30, 2025</p>
                                     </div>
                                 </a>
                             </div>
-                             <div class="article-card">
+                            <div class="article-card" data-searchable data-category="Article" data-search="The Activist’s Guide to Social Media Twitter Instagram TikTok advocacy">
                                 <a href="resources/social-media-advocacy.html" class="article-card-link">
                                     <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=2874&auto=format&fit=crop" alt="A collection of social media logos on a screen." class="article-image">
                                     <div class="article-card-content">
-                                        <h3 class="article-title">The Activist's Guide to Social Media</h3>
+                                        <h3 class="article-title">The Activist’s Guide to Social Media</h3>
                                         <p class="article-excerpt">Choosing the right platform is key. A comparison of Twitter, Instagram, TikTok, and more for effective advocacy.</p>
                                         <p class="article-meta">Resource | June 30, 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-card" data-searchable data-category="Article" data-search="Guide Preventing Activist Burnout wellbeing self-care sustainability rest">
+                                <a href="resources/activist-burnout-guide.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070&auto=format&fit=crop" alt="Person resting peacefully." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">Guide: Preventing Activist Burnout</h3>
+                                        <p class="article-excerpt">Sustainable activism requires caring for yourself. This guide covers practical strategies for maintaining your wellbeing while staying committed to the cause.</p>
+                                        <p class="article-meta">Resource | 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-card" data-searchable data-category="Article" data-search="Digital Security for Activists The Basics privacy safety online tools encryption">
+                                <a href="resources/digital-security-guide.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop" alt="A padlock on a keyboard." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">Digital Security for Activists: The Basics</h3>
+                                        <p class="article-excerpt">Protect yourself and your movement online. An introduction to essential digital security practices every activist should know.</p>
+                                        <p class="article-meta">Resource | 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-card" data-searchable data-category="Article" data-search="How to Write an Op-Ed That Gets Published writing media opinion journalism press">
+                                <a href="resources/writing-op-eds.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2073&auto=format&fit=crop" alt="A person writing at a desk." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">How to Write an Op-Ed That Gets Published</h3>
+                                        <p class="article-excerpt">Op-eds are a powerful advocacy tool. Learn how to craft a compelling argument and pitch it to the outlets that matter for your cause.</p>
+                                        <p class="article-meta">Resource | 2025</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="article-card" data-searchable data-category="Article" data-search="Navigating Media Press as an Activist journalism interviews press relations communications">
+                                <a href="resources/working-with-media.html" class="article-card-link">
+                                    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=2070&auto=format&fit=crop" alt="Microphones at a press conference." class="article-image">
+                                    <div class="article-card-content">
+                                        <h3 class="article-title">Navigating Media &amp; Press as an Activist</h3>
+                                        <p class="article-excerpt">Media coverage can amplify your message or misrepresent it. This guide helps you prepare for interviews and build productive press relationships.</p>
+                                        <p class="article-meta">Resource | 2025</p>
                                     </div>
                                 </a>
                             </div>
@@ -159,7 +235,7 @@
                     <div id="panel-books" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-books" hidden>
                         <p class="section-intro left-aligned" style="text-align:center;">A reading list for changemakers. These books provide historical context, strategic insights, and powerful inspiration.</p>
                         <div class="book-grid" style="margin-top:40px;">
-                            <div class="book-card">
+                            <div class="book-card" data-searchable data-category="Book" data-search="Rules for Radicals Saul Alinsky organizing power community">
                                 <a href="resources/rules-for-radicals-review.html">
                                     <div class="book-cover" style="background-color: #1a535c;">
                                         <div class="book-cover-title">Rules for Radicals</div>
@@ -168,7 +244,7 @@
                                 </a>
                                 <p class="book-description">A pragmatic guide on how to effectively take power from the "Haves" for the "Have-Nots."</p>
                             </div>
-                            <div class="book-card">
+                            <div class="book-card" data-searchable data-category="Book" data-search="Freedom Is a Constant Struggle Angela Y. Davis essays global struggles state violence racism oppression">
                                 <a href="resources/freedom-is-a-constant-struggle-review.html">
                                     <div class="book-cover" style="background-color: #4ecdc4;">
                                         <div class="book-cover-title">Freedom Is a Constant Struggle</div>
@@ -177,7 +253,7 @@
                                 </a>
                                 <p class="book-description">A collection of essays connecting global struggles against state violence, racism, and oppression.</p>
                             </div>
-                            <div class="book-card">
+                            <div class="book-card" data-searchable data-category="Book" data-search="Emergent Strategy adrienne maree brown biomimicry resilient adaptive movements">
                                 <a href="resources/emergent-strategy-review.html">
                                     <div class="book-cover" style="background-color: #ff6b6b;">
                                         <div class="book-cover-title">Emergent Strategy</div>
@@ -186,14 +262,68 @@
                                 </a>
                                 <p class="book-description">A guide to creating resilient and adaptive movements inspired by the science of biomimicry.</p>
                             </div>
-                             <div class="book-card">
+                            <div class="book-card" data-searchable data-category="Book" data-search="This Is an Uprising Mark Paul Engler nonviolent action mass protest organizing">
                                 <a href="resources/this-is-an-uprising-review.html">
                                     <div class="book-cover" style="background-color: #343a40;">
                                         <div class="book-cover-title">This Is an Uprising</div>
-                                        <div class="book-cover-author">Mark & Paul Engler</div>
+                                        <div class="book-cover-author">Mark &amp; Paul Engler</div>
                                     </div>
                                 </a>
                                 <p class="book-description">An exploration of strategic nonviolence and how it blends mass protest with structured organizing.</p>
+                            </div>
+                            <div class="book-card" data-searchable data-category="Book" data-search="The New Jim Crow Michelle Alexander mass incarceration race criminal justice colorblindness">
+                                <a href="resources/the-new-jim-crow-review.html">
+                                    <div class="book-cover" style="background-color: #2d3561;">
+                                        <div class="book-cover-title">The New Jim Crow</div>
+                                        <div class="book-cover-author">Michelle Alexander</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">An examination of mass incarceration as a system of racialized social control in the era of colorblindness.</p>
+                            </div>
+                            <div class="book-card" data-searchable data-category="Book" data-search="How to Be an Antiracist Ibram X. Kendi race antiracism policy">
+                                <a href="resources/how-to-be-an-antiracist-review.html">
+                                    <div class="book-cover" style="background-color: #197278;">
+                                        <div class="book-cover-title">How to Be an Antiracist</div>
+                                        <div class="book-cover-author">Ibram X. Kendi</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A transformative look at what it means to understand and work against racism in all its forms.</p>
+                            </div>
+                            <div class="book-card" data-searchable data-category="Book" data-search="No Shortcuts Jane McAlevey labor organizing power building unions deep organizing">
+                                <a href="resources/no-shortcuts-review.html">
+                                    <div class="book-cover" style="background-color: #5c4033;">
+                                        <div class="book-cover-title">No Shortcuts</div>
+                                        <div class="book-cover-author">Jane McAlevey</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A rigorous analysis of why deep organizing — not advocacy or mobilizing — is the key to winning power.</p>
+                            </div>
+                            <div class="book-card" data-searchable data-category="Book" data-search="The Purpose of Power Alicia Garza Black Lives Matter organizing movement building">
+                                <a href="resources/the-purpose-of-power-review.html">
+                                    <div class="book-cover" style="background-color: #6b3fa0;">
+                                        <div class="book-cover-title">The Purpose of Power</div>
+                                        <div class="book-cover-author">Alicia Garza</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A Black Lives Matter co-founder shares lessons on building transformative movements for the 21st century.</p>
+                            </div>
+                            <div class="book-card" data-searchable data-category="Book" data-search="We Do This Til We Free Us Mariame Kaba abolition prison reform transformative justice">
+                                <a href="resources/we-do-this-til-we-free-us-review.html">
+                                    <div class="book-cover" style="background-color: #1a5276;">
+                                        <div class="book-cover-title">We Do This 'Til We Free Us</div>
+                                        <div class="book-cover-author">Mariame Kaba</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">Essays on abolitionist organizing and transformative justice from one of the movement's leading voices.</p>
+                            </div>
+                            <div class="book-card" data-searchable data-category="Book" data-search="Pedagogy of the Oppressed Paulo Freire education liberation critical consciousness">
+                                <a href="resources/pedagogy-of-the-oppressed-review.html">
+                                    <div class="book-cover" style="background-color: #784212;">
+                                        <div class="book-cover-title">Pedagogy of the Oppressed</div>
+                                        <div class="book-cover-author">Paulo Freire</div>
+                                    </div>
+                                </a>
+                                <p class="book-description">A foundational text on critical pedagogy and how education can be a tool for liberation.</p>
                             </div>
                         </div>
                     </div>
@@ -202,17 +332,37 @@
                     <div id="panel-general" class="tab-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-general" hidden>
                         <p class="section-intro left-aligned" style="text-align:center;">A collection of helpful toolkits, external organizations, and other materials for activists.</p>
                         <div class="general-grid" style="margin-top: 40px;">
-                            <a href="https://www.aclu.org/know-your-rights/" target="_blank" class="general-card">
+                            <a href="https://www.aclu.org/know-your-rights/" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="ACLU Know Your Rights protestors activists civil liberties state-specific">
                                 <h4>ACLU: Know Your Rights</h4>
                                 <p>Essential, state-specific information for protestors and activists from the American Civil Liberties Union.</p>
                             </a>
-                             <a href="https://beautifultrouble.org/" target="_blank" class="general-card">
+                            <a href="https://beautifultrouble.org/" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="Beautiful Trouble Toolbox principles stories tactics theories nonviolent social change">
                                 <h4>Beautiful Trouble Toolbox</h4>
                                 <p>An online collection of principles, stories, tactics, and theories for nonviolent social change.</p>
                             </a>
-                            <a href="https://www.sp.org/our-work/learning-for-justice/" target="_blank" class="general-card">
+                            <a href="https://www.sp.org/our-work/learning-for-justice/" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="Learning for Justice Southern Poverty Law Center social justice anti-bias education">
                                 <h4>Learning for Justice</h4>
                                 <p>Free educational resources from the Southern Poverty Law Center to help teach about social justice and anti-bias.</p>
+                            </a>
+                            <a href="https://ssd.eff.org" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="EFF Surveillance Self-Defense digital security activists journalists privacy Electronic Frontier Foundation">
+                                <h4>EFF: Surveillance Self-Defense</h4>
+                                <p>Practical digital security guides for activists and journalists from the Electronic Frontier Foundation.</p>
+                            </a>
+                            <a href="https://www.midwestacademy.com" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="Midwest Academy training strategy resources community organizers progressive power building">
+                                <h4>Midwest Academy</h4>
+                                <p>Training and strategy resources for community organizers, with a focus on building power for progressive change.</p>
+                            </a>
+                            <a href="https://www.nonviolent-conflict.org" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="ICNC Nonviolent Conflict Resources research case studies strategic nonviolent action International Center">
+                                <h4>ICNC: Nonviolent Conflict Resources</h4>
+                                <p>Research and case studies on strategic nonviolent action from the International Center on Nonviolent Conflict.</p>
+                            </a>
+                            <a href="https://www.frameworksinstitute.org" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="FrameWorks Institute framing social issues public understanding communications policy">
+                                <h4>FrameWorks Institute</h4>
+                                <p>Tools for framing social issues to shift public understanding and build support for progressive policy.</p>
+                            </a>
+                            <a href="https://theruckussociety.org" target="_blank" class="general-card" data-searchable data-category="Resource" data-search="The Ruckus Society direct action toolkits training resources organizers">
+                                <h4>The Ruckus Society</h4>
+                                <p>Direct action toolkits and training resources for activists and organizers.</p>
                             </a>
                         </div>
                     </div>
@@ -222,18 +372,60 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-container">
-            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">Tangency Foundation</div>
+                <p class="footer-tagline">A crucial point of tangency between ideas, movements, and resources.</p>
+                <a href="https://instagram.com/ActivismHQ" target="_blank" class="footer-social">Instagram @ActivismHQ</a>
+            </div>
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="literacy.html">Activism Literacy</a></li>
+                    <li><a href="programs.html">Our Programs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Support Us</h4>
+                <p>We're a 501(c)(3) on Benevity — your employer may match donations.</p>
+                <a href="https://benevity.com/causes/840-852519445" class="cta-button" style="margin-top:15px; padding:12px 24px; font-size:0.9rem;" target="_blank">Donate via Benevity</a>
+                <p style="margin-top:20px;"><a href="mailto:contact@activisthq.org" class="footer-email">contact@activisthq.org</a></p>
+            </div>
         </div>
+        <div class="footer-bottom">&copy; 2025 Tangency Foundation. All Rights Reserved.</div>
     </footer>
 
     <script>
-        // JavaScript for the tab functionality
-        const tabs = document.querySelectorAll('.tab-link');
-        const panels = document.querySelectorAll('.tab-panel');
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        toggle.addEventListener('click', () => {
+            const open = nav.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+    </script>
 
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
+    <script>
+        (function () {
+            const tabs = document.querySelectorAll('.tab-link');
+            const panels = document.querySelectorAll('.tab-panel');
+            const tabsNav = document.querySelector('.program-tabs');
+            const tabContent = document.querySelector('.tab-content');
+            const searchInput = document.getElementById('resource-search');
+            const searchResults = document.getElementById('search-results');
+            const resultsMeta = searchResults.querySelector('.search-results-meta');
+            const resultsGrid = searchResults.querySelector('.search-results-grid');
+            const noResultsMsg = searchResults.querySelector('.no-results-msg');
+
+            function showTabs() {
+                searchResults.hidden = true;
+                tabsNav.style.display = '';
+                tabContent.style.display = '';
+            }
+
+            function activateTab(tab) {
                 tabs.forEach(t => {
                     t.classList.remove('active');
                     t.setAttribute('aria-selected', 'false');
@@ -242,15 +434,60 @@
                     p.classList.remove('active');
                     p.hidden = true;
                 });
-
                 tab.classList.add('active');
                 tab.setAttribute('aria-selected', 'true');
-                const targetPanelId = tab.getAttribute('aria-controls');
-                const targetPanel = document.getElementById(targetPanelId);
+                const targetPanel = document.getElementById(tab.getAttribute('aria-controls'));
                 targetPanel.classList.add('active');
                 targetPanel.hidden = false;
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    searchInput.value = '';
+                    showTabs();
+                    activateTab(tab);
+                });
             });
-        });
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.trim().toLowerCase();
+                if (!query) {
+                    showTabs();
+                    return;
+                }
+
+                tabsNav.style.display = 'none';
+                tabContent.style.display = 'none';
+                searchResults.hidden = false;
+
+                const allCards = document.querySelectorAll('[data-searchable]');
+                const matches = [];
+                allCards.forEach(card => {
+                    const searchText = (card.dataset.search || '').toLowerCase();
+                    const category = card.dataset.category || '';
+                    if (searchText.includes(query) || category.toLowerCase().includes(query)) {
+                        matches.push({ card, category });
+                    }
+                });
+
+                resultsGrid.innerHTML = '';
+                if (matches.length === 0) {
+                    noResultsMsg.hidden = false;
+                    resultsMeta.textContent = '';
+                } else {
+                    noResultsMsg.hidden = true;
+                    resultsMeta.textContent = matches.length + ' result' + (matches.length !== 1 ? 's' : '') + ' found';
+                    matches.forEach(function ({ card, category }) {
+                        const clone = card.cloneNode(true);
+                        const tag = document.createElement('span');
+                        tag.className = 'result-category-tag';
+                        tag.textContent = category;
+                        clone.insertBefore(tag, clone.firstChild);
+                        resultsGrid.appendChild(clone);
+                    });
+                }
+            });
+        })();
     </script>
 
 </body>
