@@ -1,0 +1,50 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 0 0 612 792
+/Helvetica-Bold findfont 20 scalefont setfont
+72 730 moveto (Stakeholder Map Example: Clean Air Now) show
+/Helvetica findfont 11 scalefont setfont
+72 705 moveto (Students want a clean-trucking ordinance near Riverdale schools.) show
+72 690 moveto (The map shows impact vs influence across parents, youth, and power holders.) show
+
+newpath 306 360 180 0 360 arc stroke
+newpath 306 360 140 0 360 arc stroke
+newpath 306 360 95 0 360 arc stroke
+/Helvetica-Bold findfont 12 scalefont setfont
+260 365 moveto (Diesel Truck Ordinance) show
+
+/Helvetica findfont 10 scalefont setfont
+/labelnode {
+  /text exch def
+  /y exch def
+  /x exch def
+  newpath x y 8 0 360 arc closepath fill
+  0 setgray
+  x 15 add y -3 add moveto text show
+} def
+
+gsave 0 0.55 0 setrgbcolor 216 480 (Parents) labelnode grestore
+gsave 0 0.55 0 setrgbcolor 386 500 (Youth Climate) labelnode grestore
+gsave 0 0.55 0 setrgbcolor 290 400 (School Nurses) labelnode grestore
+gsave 1 0.7 0 setrgbcolor 420 220 (Council President) labelnode grestore
+gsave 1 0.2 0 setrgbcolor 200 240 (Logistics Assoc.) labelnode grestore
+gsave 1 0.7 0 setrgbcolor 470 360 (Port Authority) labelnode grestore
+gsave 1 0.7 0 setrgbcolor 150 370 (Business Alliance) labelnode grestore
+
+/Helvetica-Bold findfont 12 scalefont setfont
+72 250 moveto (Legend) show
+/Helvetica findfont 10 scalefont setfont
+gsave 0 0.55 0 setrgbcolor newpath 72 230 moveto 12 0 rlineto 0 12 rlineto -12 0 rlineto closepath fill grestore
+0 setgray 90 234 moveto (High impact co-leads) show
+gsave 1 0.7 0 setrgbcolor newpath 72 210 moveto 12 0 rlineto 0 12 rlineto -12 0 rlineto closepath fill grestore
+0 setgray 90 214 moveto (Persuadable power) show
+gsave 1 0.2 0 setrgbcolor newpath 72 190 moveto 12 0 rlineto 0 12 rlineto -12 0 rlineto closepath fill grestore
+0 setgray 90 194 moveto (Opposition) show
+
+/Helvetica-Bold findfont 13 scalefont setfont
+72 160 moveto (Insights) show
+/Helvetica findfont 10 scalefont setfont
+72 140 moveto (• Parents and youth drove storytelling in hearings.) show
+72 125 moveto (• School nurses validated health data for council.) show
+72 110 moveto (• Council and business targets received economic briefs.) show
+72 95 moveto (• Logistics lobby mapped for pressure while negotiating timeline.) show
+showpage
