@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Mapping Workbook | Tangency Foundation</title>
+    <style>
+        :root {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #1a1a1a;
+            --accent: #0d3d45;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f6f8;
+        }
+        .page {
+            width: 900px;
+            max-width: 100%;
+            margin: 0 auto 40px auto;
+            background: #fff;
+            padding: 40px 50px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+            page-break-after: always;
+        }
+        h1 {
+            margin: 0;
+            font-size: 26px;
+            color: var(--accent);
+            letter-spacing: 0.03em;
+        }
+        h2 {
+            font-size: 18px;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        p, li, span, label {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .line {
+            border-bottom: 1px dashed #b5c1c9;
+            margin: 8px 0 18px 0;
+        }
+        .grid {
+            display: grid;
+            gap: 18px;
+        }
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+        .box {
+            border: 1px solid #d6dee4;
+            border-radius: 10px;
+            padding: 16px;
+            min-height: 120px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+        .table th,
+        .table td {
+            border: 1px solid #d6dee4;
+            padding: 8px;
+            font-size: 13px;
+        }
+        .table th {
+            background: #f0f4f6;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .matrix {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(200px, 1fr));
+            grid-template-rows: repeat(2, minmax(160px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .matrix div {
+            border: 1px solid #ced7de;
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        .matrix span {
+            font-size: 13px;
+        }
+        .badge {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #5e6b74;
+            margin-bottom: 8px;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #80909d;
+            margin-top: 50px;
+        }
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0 auto;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <h1>Stakeholder Brainstorming Roster</h1>
+        <p>Capture everyone connected to the issue before placing them on the power map.</p>
+
+        <div class="section">
+            <h2>Instructions</h2>
+            <ol>
+                <li>Work with your team to list people, agencies, donors, opponents, and community members.</li>
+                <li>Score how impacted they are by the issue (1 = low, 5 = high) and how much influence they have.</li>
+                <li>Use the insights column to capture relationships, notes, or quick follow-up ideas.</li>
+            </ol>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 35%;">Name / Organization</th>
+                    <th style="width: 15%;">Impacted (1–5)</th>
+                    <th style="width: 15%;">Influence (1–5)</th>
+                    <th>Insights / Follow-ups</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+                <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <div class="section">
+            <h2>Immediate Actions</h2>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="footer">Tangency Action Kit · Power Mapping Lab</div>
+    </div>
+
+    <div class="page">
+        <h1>Target Analysis Profile</h1>
+        <p>Build a “baseball card” for your primary decision-maker.</p>
+
+        <div class="grid grid-2">
+            <div class="box">
+                <span class="badge">Primary Target</span>
+                <div class="line"></div>
+                <span class="badge">Title / Institution</span>
+                <div class="line"></div>
+            </div>
+            <div class="box">
+                <span class="badge">Next Check-in Date</span>
+                <div class="line"></div>
+                <span class="badge">Desired Outcome</span>
+                <div class="line"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>1. Motivations</h2>
+            <p>What do they care about? What do they publicly promise? What risks do they avoid?</p>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="section">
+            <h2>2. Influencers</h2>
+            <p>List the donors, advisors, friends, or communities that sway them.</p>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="section">
+            <h2>3. Pressure Points & Public Commitments</h2>
+            <p>Upcoming elections, budget hearings, board votes, press moments.</p>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="section">
+            <h2>4. Relational Assignments</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 35%;">Team Owner</th>
+                        <th>Role / Plan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>&nbsp;</td><td></td></tr>
+                    <tr><td>&nbsp;</td><td></td></tr>
+                    <tr><td>&nbsp;</td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">Tangency Action Kit · Power Mapping Lab</div>
+    </div>
+
+    <div class="page">
+        <h1>Strategy Selection Grid</h1>
+        <p>Plot targets by Influence (vertical) and Support (horizontal). Assign tactics per quadrant.</p>
+
+        <div class="matrix">
+            <div>
+                <span class="badge">High Influence · Oppose</span>
+                <h2>Opponents</h2>
+                <p>Tactics: isolate, pressure, expose contradictions.</p>
+            </div>
+            <div>
+                <span class="badge">High Influence · Support</span>
+                <h2>Champions</h2>
+                <p>Tactics: activate, invite to lead, give the microphone.</p>
+            </div>
+            <div>
+                <span class="badge">Low Influence · Oppose</span>
+                <h2>Detractors</h2>
+                <p>Tactics: monitor, neutralize misinformation, keep informed.</p>
+            </div>
+            <div>
+                <span class="badge">Low Influence · Support</span>
+                <h2>Allies</h2>
+                <p>Tactics: educate, skill up, gather stories and testimonials.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Action List & Owners</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width: 5%;">#</th>
+                        <th style="width: 45%;">Action</th>
+                        <th style="width: 25%;">Owner</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td></td><td></td><td></td></tr>
+                    <tr><td>2</td><td></td><td></td><td></td></tr>
+                    <tr><td>3</td><td></td><td></td><td></td></tr>
+                    <tr><td>4</td><td></td><td></td><td></td></tr>
+                    <tr><td>5</td><td></td><td></td><td></td></tr>
+                    <tr><td>6</td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer">Tangency Action Kit · Power Mapping Lab</div>
+    </div>
+
+</body>
+</html>
