@@ -1173,6 +1173,18 @@ h4 {
 
 .footer-email:hover { opacity: 0.8; }
 
+.footer-terms-link {
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.footer-terms-link:hover {
+    color: white;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255,255,255,0.15);
     text-align: center;
