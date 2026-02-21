@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide: Stakeholder Analysis for Impact Projects | Tangency Foundation</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../programs.html">Our Programs</a></li>
+                    <li><a href="../resources.html" class="active">Resources</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="article-header" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2874&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                <h1 class="article-title-full" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6);">Guide: Stakeholder Analysis for Impact Projects</h1>
+                <p class="article-meta-full">Map who is affected, who has power, and how to move them.</p>
+            </header>
+
+            <section class="content-section">
+                <div class="container article-content-container">
+                    <p>Before you design tactics, you need to know who is touched by the issue and who can actually grant the win. A stakeholder analysis helps you see the full ecosystem&mdash;from residents living the problem to institutions with leverage. We use a simple two-axis map: <strong>Impacted by Issue</strong> and <strong>Can Impact Issue</strong>. Plotting everyone on that grid shows you who belongs at the decision table, who needs political education, and which power brokers deserve tailored pressure.</p>
+
+                    <h3 class="article-divider">Step 1: List everyone connected to the issue</h3>
+                    <ul class="article-list">
+                        <li>Brainstorm individuals, organizations, agencies, funders, unions, and businesses.</li>
+                        <li>Include supporters, opponents, neutrals, and people you have not met yet.</li>
+                        <li>Capture demographics, existing relationships, and pain points for each.</li>
+                    </ul>
+
+                    <h3 class="article-divider">Step 2: Score impact and influence</h3>
+                    <p>Give every stakeholder a score from 1 (low) to 5 (high) for both axes. Impact answers “How directly does this issue touch them?” Influence answers “How much power do they have to accelerate or block change?”</p>
+
+                    <h3 class="article-divider">Step 3: Plot and interpret</h3>
+                    <p>Drop each stakeholder into the quadrant that fits their scores:</p>
+                    <ul>
+                        <li><strong>Q1 High Impact / High Influence:</strong> Co-design strategy with them. They are your campaign core.</li>
+                        <li><strong>Q2 High Impact / Low Influence:</strong> Build capacity so their stories drive the narrative.</li>
+                        <li><strong>Q3 Low Impact / Low Influence:</strong> Keep informed; activate if they become more affected.</li>
+                        <li><strong>Q4 Low Impact / High Influence:</strong> Treat as decision-makers or validators. Prepare tight briefs and asks.</li>
+                    </ul>
+
+                    <div class="kit-callout">
+                        <h4>Example: Clean Air Now</h4>
+                        <p>Student organizers in “Clean Air Now” want a clean-trucking ordinance. Parents and youth living near the freeway scored 5 on impact but only 2-3 on influence, so organizers scheduled listening sessions (Q2) and media trainings (Q1) to elevate them. City Council leaders and the logistics lobby sat in Q4: low direct impact but high power. The team prepared health + economic briefs plus ally endorsements before meeting them. Their filled-out map illustrates how each quadrant drove specific tactics.</p>
+                        <p><a href="assets/stakeholder-analysis/stakeholder-map-example.pdf" download>Download the example map</a></p>
+                    </div>
+
+                    <h3 class="article-divider">Step 4: Turn the map into assignments</h3>
+                    <p>For every stakeholder, document the outreach approach, messenger, and deadline. Integrate the assignments into your project tracker so the analysis leads to action, not just another slide.</p>
+
+                    <h3 class="article-divider">Downloads</h3>
+                    <ul class="kit-downloads-list">
+                        <li><a href="assets/stakeholder-analysis/stakeholder-map-template.pdf" download>Stakeholder map template (PDF)</a> | <a href="assets/stakeholder-analysis/stakeholder-map-template.md" download>Editable version</a></li>
+                        <li><a href="assets/stakeholder-analysis/stakeholder-map-example.pdf" download>Filled example (PDF)</a> | <a href="assets/stakeholder-analysis/stakeholder-map-example.md" download>Editable version</a></li>
+                    </ul>
+
+                    <div class="article-back-link">
+                        <a href="../resources.html" class="cta-button">← Back to Resources</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

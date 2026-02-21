@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide: SWOT Analysis for Impact Projects | Tangency Foundation</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../programs.html">Our Programs</a></li>
+                    <li><a href="../resources.html" class="active">Resources</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="article-header" style="background-image: url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?q=80&w=2874&auto=format&fit=crop'); background-size: cover; background-position: center;">
+                <h1 class="article-title-full" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6);">Guide: SWOT Analysis for Impact Projects</h1>
+                <p class="article-meta-full">Use strengths, weaknesses, opportunities, and threats to sharpen your strategy.</p>
+            </header>
+
+            <section class="content-section">
+                <div class="container article-content-container">
+                    <p>A SWOT analysis takes stock of everything working in your favor&mdash;and everything that could derail your project. It’s especially useful when you’re about to scale, pitch funders, or reset strategy after a campaign sprint. Unlike business-school SWOTs, we center community power: internal factors are <strong>strengths</strong> and <strong>weaknesses</strong> inside your team or coalition, while external factors are <strong>opportunities</strong> and <strong>threats</strong> in the broader landscape.</p>
+
+                    <h3 class="article-divider">How to facilitate a SWOT session</h3>
+                    <ol class="article-list">
+                        <li><strong>Prep the quadrant.</strong> Print or project the template so everyone can drop notes into each box.</li>
+                        <li><strong>Brainstorm quietly.</strong> Give folks 5 minutes to jot ideas individually. This prevents the loudest voice from steering the conversation.</li>
+                        <li><strong>Cluster themes.</strong> Group similar stickies, then label top 2-3 items per quadrant.</li>
+                        <li><strong>Translate into action.</strong> For every threat, note a mitigation plan. For every strength, match an opportunity.</li>
+                    </ol>
+
+                    <div class="kit-callout">
+                        <h4>Example: Community Fridge Expansion</h4>
+                        <p>The “Community Fridge” crew wants to grow from one fridge to three. Their SWOT revealed:</p>
+                        <ul>
+                            <li><strong>Strengths:</strong> trusted volunteers, steady grocery donations, online supporters.</li>
+                            <li><strong>Weaknesses:</strong> limited cold-chain gear, burnout, no property agreements.</li>
+                            <li><strong>Opportunities:</strong> city micro-grant, culinary school partnership, media interest.</li>
+                            <li><strong>Threats:</strong> rising utilities, vandalism, increased inspections.</li>
+                        </ul>
+                        <p>Matching strengths to opportunities led to a winning plan: use grocery credibility to secure the micro-grant for new fridges, and enlist culinary students to prep meals (relieving volunteer fatigue). Drafting MOUs with property owners mitigated inspections and vandalism threats. <a href="assets/swot-analysis/swot-example.pdf" download>Download the filled example</a>.</p>
+                    </div>
+
+                    <h3 class="article-divider">Put your SWOT to work</h3>
+                    <p>Don’t let the chart gather dust. Use it to brief funders (“Here’s how we’ll spend dollars to seize an opportunity”), align staff (“We’re tackling this weakness first”), and design metrics (“Did the mitigation we noted reduce the threat?”).</p>
+
+                    <h3 class="article-divider">Downloads</h3>
+                    <ul class="kit-downloads-list">
+                        <li><a href="assets/swot-analysis/swot-template.pdf" download>SWOT template (PDF)</a> | <a href="assets/swot-analysis/swot-template.md" download>Editable version</a></li>
+                        <li><a href="assets/swot-analysis/swot-example.pdf" download>Community Fridge example (PDF)</a> | <a href="assets/swot-analysis/swot-example.md" download>Editable version</a></li>
+                    </ul>
+
+                    <div class="article-back-link">
+                        <a href="../resources.html" class="cta-button">← Back to Resources</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>
