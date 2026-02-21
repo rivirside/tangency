@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Healing Circle Routine | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Healing Circle Routine</h1>
+                    <p>Hold a 30–45 minute circle that lets teams debrief wins and losses, share care requests, and leave with renewed clarity.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Wellbeing</span>
+                        <span class="action-kit-meta-chip">Format: Facilitation Guide</span>
+                        <span class="action-kit-meta-chip">Time: 30–45 minutes</span>
+                        <span class="action-kit-meta-chip">Team: Any size</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Post-action debriefs, campaign pivots, staff meetings after crises.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Shared agreements, anonymized themes, support commitments.</p>
+                        <p class="kit-fact"><span>Materials</span> Timer, talking piece, notes doc, optional virtual whiteboard.</p>
+                        <p class="kit-fact"><span>Outputs</span> List of pauses/delegations/resourcing decisions.</p>
+                    </div>
+
+                    <h3>Prep checklist</h3>
+                    <ul>
+                        <li>Choose a facilitator and a note-taker (can rotate).</li>
+                        <li>Prepare opening grounding (breath, stretch, music, or visualization).</li>
+                        <li>Set up a shared document to capture anonymized themes and follow-ups.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Circle flow</h3>
+                        <ol>
+                            <li><strong>Welcome + agreements (5 min).</strong> Review confidentiality, step up/step back, and care options.</li>
+                            <li><strong>Grounding (5 min).</strong> Guide a short breathing or somatic practice.</li>
+                            <li><strong>Shares (20–25 min).</strong> Each person offers one high, one low, and one request for support using a talking piece or virtual queue.</li>
+                            <li><strong>Collective decisions (10 min).</strong> Identify what the team will pause, delegate, or resource based on the shares.</li>
+                            <li><strong>Close (5 min).</strong> Appreciations round + reminder of support options (therapy funds, rest days, etc.).</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Rotate facilitators so care work is shared.</li>
+                            <li>Offer multiple ways to participate (chat, shared doc) for folks who don’t want to speak aloud.</li>
+                            <li>Summarize anonymized themes and share them with leadership so structural fixes follow.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/healing-circle-routine/circle-agenda.pdf" download>Circle agenda (PDF)</a> | <a href="../assets/healing-circle-routine/circle-agenda.md" download>Editable version</a></li>
+                        <li><a href="../assets/healing-circle-routine/support-request-tracker.csv" download>Support request tracker (CSV)</a></li>
+                        <li><a href="../assets/healing-circle-routine/follow-up-email-template.pdf" download>Follow-up email template (PDF)</a> | <a href="../assets/healing-circle-routine/follow-up-email-template.md" download>Editable version</a></li>
+                        <li><a href="../docs/healing-circle-routine.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/healing-circle-routine.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

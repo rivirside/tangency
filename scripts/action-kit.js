@@ -1,7 +1,17 @@
 (function () {
+    const scriptEl = document.currentScript || document.querySelector('script[src*="action-kit.js"]');
+    const scriptSrc = scriptEl ? scriptEl.src : '';
+    const SITE_BASE = scriptSrc ? scriptSrc.replace(/scripts\/action-kit\.js(\?.*)?$/, '') : window.location.origin + '/';
+
+    const buildDetailsUrl = (slug) => {
+        if (!slug) return null;
+        return SITE_BASE + 'resources/action-kit/' + slug + '.html';
+    };
+
     const ACTION_KIT_ITEMS = [
         {
             id: 'power-mapping-lab',
+            slug: 'power-mapping-lab',
             priority: 1,
             title: 'Power Mapping Lab',
             summary: 'Facilitate a structured session to map primary targets, influencers, and allies before you lock in campaign tactics.',
@@ -19,6 +29,7 @@
         },
         {
             id: 'narrative-sprint-board',
+            slug: 'narrative-sprint-board',
             priority: 2,
             title: 'Narrative Sprint Board',
             summary: 'A one-week storytelling cadence that keeps your message consistent across social, email, and press notes.',
@@ -36,6 +47,7 @@
         },
         {
             id: 'rapid-response-call-circle',
+            slug: 'rapid-response-call-circle',
             priority: 3,
             title: 'Rapid Response Call Circle',
             summary: 'Build a cascading check-in tree that lets you brief and mobilize hundreds of people in under 30 minutes.',
@@ -53,6 +65,7 @@
         },
         {
             id: 'mutual-aid-drop-spot',
+            slug: 'mutual-aid-drop-spot',
             priority: 4,
             title: 'Mutual Aid Drop Spot Playbook',
             summary: 'Stand up a weekend pop-up where neighbors can leave or pick up supplies without bureaucracy.',
@@ -70,6 +83,7 @@
         },
         {
             id: 'press-day-toolkit',
+            slug: 'press-day-toolkit',
             priority: 5,
             title: 'Press Day Toolkit',
             summary: 'Everything you need for a 24-hour earned media push around a new report, action, or story.',
@@ -87,6 +101,7 @@
         },
         {
             id: 'volunteer-onboarding-flow',
+            slug: 'volunteer-onboarding-flow',
             priority: 6,
             title: 'Volunteer Onboarding Flow',
             summary: 'Move supporters from sign-up form to first meaningful task within five days.',
@@ -104,6 +119,7 @@
         },
         {
             id: 'grassroots-budget-scenarios',
+            slug: 'grassroots-budget-scenarios',
             priority: 7,
             title: 'Grassroots Budget Scenario Builder',
             summary: 'Quickly stress-test three funding scenarios so you can decide where to invest limited dollars.',
@@ -121,6 +137,7 @@
         },
         {
             id: 'digital-security-checkup',
+            slug: 'digital-security-checkup',
             priority: 8,
             title: 'Digital Security Checkup',
             summary: 'A quarterly ritual that keeps devices, accounts, and sensitive data hardened.',
@@ -138,6 +155,7 @@
         },
         {
             id: 'corporate-pressure-brief',
+            slug: 'corporate-pressure-brief',
             priority: 9,
             title: 'Corporate Pressure Brief',
             summary: 'Convert raw research into a two-page brief that helps supporters push a company or donor to move.',
@@ -155,6 +173,7 @@
         },
         {
             id: 'healing-circle-routine',
+            slug: 'healing-circle-routine',
             priority: 10,
             title: 'Healing Circle Routine',
             summary: 'A steady format for debriefing wins and losses without burning out your core team.',
@@ -172,6 +191,7 @@
         },
         {
             id: 'policy-one-pager-studio',
+            slug: 'policy-one-pager-studio',
             priority: 11,
             title: 'Policy One-Pager Studio',
             summary: 'Translate complex legislation into a friendly explainer you can hand to officials or volunteers.',
@@ -224,6 +244,7 @@
 
     const createCard = (item, options = {}) => {
         const { compact = false } = options;
+        const detailsUrl = buildDetailsUrl(item.slug);
         const card = document.createElement('div');
         card.className = 'action-kit-card' + (compact ? ' action-kit-card-compact' : '');
         card.dataset.searchable = '';
@@ -246,6 +267,7 @@
             <ul class="action-kit-steps">${stepsHtml}</ul>
             ${!compact && item.insight ? `<p class="action-kit-tip">${item.insight}</p>` : ''}
             <div class="action-kit-tags">${tagsHtml}</div>
+            ${detailsUrl ? `<a class="action-kit-open" href="${detailsUrl}">Open full kit</a>` : ''}
         `;
 
         return card;
@@ -351,9 +373,7 @@
 
             if (linkNeeded) {
                 const link = document.createElement('a');
-                const isNestedResourcesPage = /\/resources\//.test(window.location.pathname);
-                const hrefBase = isNestedResourcesPage ? '../' : '';
-                link.href = hrefBase + 'resources.html#panel-action-kit';
+                link.href = SITE_BASE + 'resources.html#panel-action-kit';
                 link.className = 'action-kit-link';
                 link.textContent = 'Browse the full Action Kit →';
                 container.appendChild(link);

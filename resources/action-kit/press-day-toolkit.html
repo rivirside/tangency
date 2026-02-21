@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Press Day Toolkit | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Press Day Toolkit</h1>
+                    <p>Plan a 24-hour earned media blitz that surrounds your report release or action with aligned spokespeople, quotes, and visuals.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Media Outreach</span>
+                        <span class="action-kit-meta-chip">Format: Template Pack</span>
+                        <span class="action-kit-meta-chip">Time: Half-day build</span>
+                        <span class="action-kit-meta-chip">Team: Comms crew + spokespeople</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Report launches, executive actions, rapid response to investigations.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Media advisory, press list, b-roll folder, quote bank.</p>
+                        <p class="kit-fact"><span>Materials</span> Shared drive, spokesperson bios, embargo plan.</p>
+                        <p class="kit-fact"><span>Outputs</span> Coverage tracker + social proof plan.</p>
+                    </div>
+
+                    <h3>Prep checklist</h3>
+                    <ul>
+                        <li>Draft a two-paragraph media advisory with headline, hook, and spokespeople.</li>
+                        <li>Package assets (photos, logos, b-roll) in one folder with filenames that make sense.</li>
+                        <li>Identify three validators (partners, academics, workers) who can offer quotes.</li>
+                        <li>Decide which outlets get embargoed previews and schedule those briefings.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Press day timeline</h3>
+                        <ol>
+                            <li><strong>T-24 hours.</strong> Send embargoed advisory to key reporters with offer for one-on-one background call.</li>
+                            <li><strong>T-3 hours.</strong> Share the public advisory + asset folder with your full press list. Post teaser graphics on social.</li>
+                            <li><strong>Go live.</strong> Release the report/action, blast updates on every channel, and pitch short follow-up angles tailored to each outlet.</li>
+                            <li><strong>Post-release.</strong> Track coverage, post clips to your website, and send thank-yous plus “what’s next” to reporters and validators.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Assign one person to run the war room inbox so reporters get rapid responses.</li>
+                            <li>Prep social media proof (ally quotes, infographics) to drop the moment the first story lands.</li>
+                            <li>Update your media tracker with open rates and replies so list hygiene stays tight.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/press-day-toolkit/media-advisory-template.pdf" download>Media advisory template (PDF)</a> | <a href="../assets/press-day-toolkit/media-advisory-template.md" download>Editable version</a></li>
+                        <li><a href="../assets/press-day-toolkit/coverage-tracker.csv" download>Coverage tracker spreadsheet (CSV)</a></li>
+                        <li><a href="../assets/press-day-toolkit/embargo-pitch-script.pdf" download>Embargo pitch email script (PDF)</a> | <a href="../assets/press-day-toolkit/embargo-pitch-script.md" download>Editable version</a></li>
+                        <li><a href="../docs/press-day-toolkit.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/press-day-toolkit.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

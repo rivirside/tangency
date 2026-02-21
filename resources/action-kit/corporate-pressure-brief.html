@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Corporate Pressure Brief | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Corporate Pressure Brief</h1>
+                    <p>Turn raw research into a two-page brief that equips supporters to pressure a company, donor, or institutional target.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Research + Accountability</span>
+                        <span class="action-kit-meta-chip">Format: Brief Template</span>
+                        <span class="action-kit-meta-chip">Time: Half-day</span>
+                        <span class="action-kit-meta-chip">Team: Researchers + spokespeople</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Investor meetings, shareholder actions, consumer pressure campaigns.</p>
+                        <p class="kit-fact"><span>Deliverable</span> PDF/slide brief with demand, leverage points, scripts.</p>
+                        <p class="kit-fact"><span>Materials</span> Company filings, charity ratings, stakeholder quotes.</p>
+                        <p class="kit-fact"><span>Outputs</span> Shareable doc for supporters + insider champions.</p>
+                    </div>
+
+                    <h3>Prep checklist</h3>
+                    <ul>
+                        <li>Collect publicly available data: annual reports, board lists, philanthropic giving.</li>
+                        <li>Interview allies inside the company if safe to do so.</li>
+                        <li>Map leverage: shareholders, employees, vendors, regulators, key markets.</li>
+                        <li>Decide on the specific policy or dollar shift you are demanding.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Brief structure</h3>
+                        <ol>
+                            <li><strong>Page 1: Stakes + demand.</strong> Describe the harm, name the affected community, and state the demand in bold type.</li>
+                            <li><strong>Page 1: Leverage matrix.</strong> Use a simple table to show each pillar (investors, customers, labor) and the action you’ll take.</li>
+                            <li><strong>Page 2: Scripts + actions.</strong> Provide supporter scripts (phone/email) and insider scripts for employees or donors.</li>
+                            <li><strong>Page 2: Receipts.</strong> Cite data, quotes, and visuals proving why the company must move now.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Include a heat map that highlights where the company operates—local chapters can tailor actions.</li>
+                            <li>Design with shareability in mind; a one-pager can live on phones at rallies or shareholder meetings.</li>
+                            <li>Add a QR code that links to a petition or toolkit for rapid mobilization.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/corporate-pressure-brief/brief-template.pdf" download>Two-page brief template (PDF)</a> | <a href="../assets/corporate-pressure-brief/brief-template.md" download>Editable version</a></li>
+                        <li><a href="../assets/corporate-pressure-brief/research-log.csv" download>Research log (CSV)</a></li>
+                        <li><a href="../assets/corporate-pressure-brief/scripts-pack.pdf" download>Script pack (PDF)</a> | <a href="../assets/corporate-pressure-brief/scripts-pack.md" download>Editable version</a></li>
+                        <li><a href="../docs/corporate-pressure-brief.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/corporate-pressure-brief.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

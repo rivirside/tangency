@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Rapid Response Call Circle | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Rapid Response Call Circle</h1>
+                    <p>Build a cascading tree of volunteer callers so you can brief hundreds of people in minutes and confirm who is ready to act.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Mobilization</span>
+                        <span class="action-kit-meta-chip">Format: Checklist</span>
+                        <span class="action-kit-meta-chip">Time: Prep once, deploy anytime</span>
+                        <span class="action-kit-meta-chip">Team: 10–200 volunteers</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Court decision days, urgent rallies, fundraising crises, or policy alerts.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Updated call tree spreadsheet + conversation log.</p>
+                        <p class="kit-fact"><span>Materials</span> Shared sheet, script, disposition codes, texting backup.</p>
+                        <p class="kit-fact"><span>Outputs</span> Response rate, confirmed attendees, rapid intel.</p>
+                    </div>
+
+                    <h3>Prep checklist</h3>
+                    <ul>
+                        <li>Segment supporters into pods of 8–10 people based on geography or language.</li>
+                        <li>Assign a captain and a backup captain to every pod.</li>
+                        <li>Write two scripts: one informational briefing and one mobilization script with clear asks.</li>
+                        <li>Set up a shared log (Airtable, Google Sheet) with columns for call status, notes, and follow-ups.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Deployment instructions</h3>
+                        <ol>
+                            <li><strong>Trigger the tree.</strong> Lead organizer briefs captains on Zoom or voice memo. Captains then call their pod members within 15 minutes.</li>
+                            <li><strong>Track responses.</strong> Captains log outcomes in the shared sheet using simple codes (Ready / Needs info / Can’t help).</li>
+                            <li><strong>Escalate gaps.</strong> If someone can’t be reached after two attempts, backups or staff step in using text or WhatsApp.</li>
+                            <li><strong>Close the loop.</strong> Once pods finish, captains report totals and any intel. Send a thank-you SMS with next steps to everyone who answered.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Give captains voice note examples so tone stays grounded and calm even during urgent situations.</li>
+                            <li>Rotate captains each quarter to avoid burnout and grow new leaders.</li>
+                            <li>Export your log after each activation so you can analyze who consistently responds.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/rapid-response-call-circle/call-tree-roster.csv" download>Call tree roster (CSV)</a></li>
+                        <li><a href="../assets/rapid-response-call-circle/rapid-response-scripts.pdf" download>Rapid response scripts (PDF)</a> | <a href="../assets/rapid-response-call-circle/rapid-response-scripts.md" download>Editable version</a></li>
+                        <li><a href="../assets/rapid-response-call-circle/debrief-form.pdf" download>Debrief form (PDF)</a> | <a href="../assets/rapid-response-call-circle/debrief-form.md" download>Editable version</a></li>
+                        <li><a href="../docs/rapid-response-call-circle.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/rapid-response-call-circle.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

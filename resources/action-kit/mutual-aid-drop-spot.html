@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Mutual Aid Drop Spot | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Mutual Aid Drop Spot Playbook</h1>
+                    <p>Launch a pop-up hub where neighbors can leave or pick up essentials with dignity and zero bureaucracy.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Mutual Aid</span>
+                        <span class="action-kit-meta-chip">Format: Playbook</span>
+                        <span class="action-kit-meta-chip">Time: 2–3 hours setup</span>
+                        <span class="action-kit-meta-chip">Team: 4–8 hosts</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Weekends, holiday drives, neighborhood events, or workplace giving days.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Organized intake, sorting, and community shopping zones.</p>
+                        <p class="kit-fact"><span>Materials</span> Folding tables, signage, bins, label tape, QR feedback form.</p>
+                        <p class="kit-fact"><span>Outputs</span> Inventory log + list of unmet requests.</p>
+                    </div>
+
+                    <h3>Prep checklist</h3>
+                    <ul>
+                        <li>Secure a location with shade or indoor access, restrooms, and nearby transit.</li>
+                        <li>Obtain permission from property owners or city permitting offices if needed.</li>
+                        <li>Create clear signage for “Intake,” “Sorting,” and “Free Store” zones.</li>
+                        <li>Set up a simple QR survey or clipboard to capture requests and feedback.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Operating the drop spot</h3>
+                        <ol>
+                            <li><strong>Intake.</strong> Greeters welcome donors, record items, and note expiration dates if food is involved.</li>
+                            <li><strong>Sorting.</strong> Volunteers inspect items quickly, wipe them down, and sort by category (pantry, hygiene, baby, PPE, etc.).</li>
+                            <li><strong>Community shopping.</strong> Display items neatly with category cards. Offer tote bags and let neighbors choose what they need without limits unless inventory is low.</li>
+                            <li><strong>Wrap-up.</strong> Document what’s left, redistribute perishable goods, and share requests on social so donors know what to bring next time.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Care tips</h4>
+                        <ul>
+                            <li>Post your mutual aid values (solidarity not charity, no questions asked) so everyone understands the culture.</li>
+                            <li>Budget for stipends or gift cards for directly impacted volunteers who are holding the space.</li>
+                            <li>Partner with local businesses for recurring donations of high-need items.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/mutual-aid-drop-spot/zone-map-guide.pdf" download>Zone map & signage guide (PDF)</a> | <a href="../assets/mutual-aid-drop-spot/zone-map-guide.md" download>Editable version</a></li>
+                        <li><a href="../assets/mutual-aid-drop-spot/inventory-tracker.csv" download>Inventory & request tracker (CSV)</a></li>
+                        <li><a href="../assets/mutual-aid-drop-spot/volunteer-shift-script.pdf" download>Volunteer shift script (PDF)</a> | <a href="../assets/mutual-aid-drop-spot/volunteer-shift-script.md" download>Editable version</a></li>
+                        <li><a href="../docs/mutual-aid-drop-spot.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/mutual-aid-drop-spot.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

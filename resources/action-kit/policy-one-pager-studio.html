@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Policy One-Pager Studio | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Policy One-Pager Studio</h1>
+                    <p>Translate complex legislation into a concise explainer that organizers, volunteers, and officials can understand in five minutes.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Policy Education</span>
+                        <span class="action-kit-meta-chip">Format: Studio Session</span>
+                        <span class="action-kit-meta-chip">Time: 75 minutes</span>
+                        <span class="action-kit-meta-chip">Team: Writers + policy leads</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Lobby days, canvasses, legislative visits, partner briefings.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Designed one-pager (PDF + print) with CTA + QR code.</p>
+                        <p class="kit-fact"><span>Materials</span> Bill text, fact sheets, design template, quote bank.</p>
+                        <p class="kit-fact"><span>Outputs</span> Shared doc you can localize by swapping stats.</p>
+                    </div>
+
+                    <h3>Prep checklist</h3>
+                    <ul>
+                        <li>Gather the bill summary, fiscal note, and any opposition talking points.</li>
+                        <li>Interview a directly impacted person or frontline partner for a quote.</li>
+                        <li>Choose the template (portrait or landscape) and pre-load your brand colors.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Studio flow</h3>
+                        <ol>
+                            <li><strong>Outline (15 min).</strong> Write the human-centered lead: problem, people affected, proposed fix.</li>
+                            <li><strong>Break it down (20 min).</strong> Create three sections: What the bill does, how it’s paid for, what happens if it fails. Use bullets and icons.</li>
+                            <li><strong>Add story + CTA (15 min).</strong> Insert a quote or mini case study plus a QR code linking to deeper resources or action forms.</li>
+                            <li><strong>Peer review (15 min).</strong> Policy lead checks accuracy; organizer ensures clarity for everyday readers.</li>
+                            <li><strong>Publish (10 min).</strong> Export to PDF for print + PNG for digital sharing.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Use plain language—swap “tranche” for “dollars in the second year,” etc.</li>
+                            <li>Leave a stats slot that can be localized for different districts.</li>
+                            <li>Embed a shortened link so people without smartphones can still follow up.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/policy-one-pager-studio/one-pager-template.pdf" download>One-pager template (PDF)</a> | <a href="../assets/policy-one-pager-studio/one-pager-template.md" download>Editable version</a></li>
+                        <li><a href="../assets/policy-one-pager-studio/plain-language-checklist.pdf" download>Plain-language checklist (PDF)</a> | <a href="../assets/policy-one-pager-studio/plain-language-checklist.md" download>Editable version</a></li>
+                        <li><a href="../assets/policy-one-pager-studio/qr-cta-examples.pdf" download>QR + CTA examples (PDF)</a> | <a href="../assets/policy-one-pager-studio/qr-cta-examples.md" download>Editable version</a></li>
+                        <li><a href="../docs/policy-one-pager-studio.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/policy-one-pager-studio.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Volunteer Onboarding Flow | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Volunteer Onboarding Flow</h1>
+                    <p>Convert sign-ups into active teammates within five days using automated emails, orientation blocks, and buddy systems.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Organizing Operations</span>
+                        <span class="action-kit-meta-chip">Format: Workflow</span>
+                        <span class="action-kit-meta-chip">Time: Build once, automate</span>
+                        <span class="action-kit-meta-chip">Team: Operations + team leads</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Rapid scaling periods, fellowship launches, distributed chapters.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Automated journey map + task list.</p>
+                        <p class="kit-fact"><span>Materials</span> Email platform, calendar tool, intake survey, buddy roster.</p>
+                        <p class="kit-fact"><span>Outputs</span> Conversion metrics + feedback loop.</p>
+                    </div>
+
+                    <h3>Flow overview</h3>
+                    <p>The flow consists of three touch points: instant welcome email, orientation session, and first assignment with a buddy check-in. Track how many people move through each stage so you can improve scripts.</p>
+
+                    <h4>Prep checklist</h4>
+                    <ul>
+                        <li>Write a welcome email that names two specific roles people can try immediately.</li>
+                        <li>Create a Typeform or Google Form to capture skills, schedule, and languages.</li>
+                        <li>Block recurring 30-minute orientation sessions (virtual or hybrid).</li>
+                        <li>Recruit a buddy bench—experienced volunteers willing to shadow new folks for two weeks.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Implementation steps</h3>
+                        <ol>
+                            <li><strong>Day 0 – Email.</strong> Auto-send the welcome note with the intake survey plus a Calendly link to orientation.</li>
+                            <li><strong>Day 2 – Orientation.</strong> Review mission, campaigns, culture norms, and end with a menu of starter tasks. Get each attendee to pick one on the spot.</li>
+                            <li><strong>Day 3 – Assignment.</strong> Team leads receive the intake responses + task choice and send a direct Slack/WhatsApp intro with their buddy.</li>
+                            <li><strong>Day 5 – Buddy check-in.</strong> Buddies confirm progress, answer questions, and log any blockers in the onboarding tracker.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Measure conversion by dividing the number of people who take a first task by total sign-ups.</li>
+                            <li>Record a 5-minute orientation video for people who can’t attend live and pair it with a quiz to confirm completion.</li>
+                            <li>Celebrate Day 5 wins publicly to reinforce the culture of action.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/volunteer-onboarding-flow/onboarding-journey-map.pdf" download>Onboarding journey map (PDF)</a> | <a href="../assets/volunteer-onboarding-flow/onboarding-journey-map.md" download>Editable version</a></li>
+                        <li><a href="../assets/volunteer-onboarding-flow/orientation-slide-script.pdf" download>Orientation slide script (PDF)</a> | <a href="../assets/volunteer-onboarding-flow/orientation-slide-script.md" download>Editable version</a></li>
+                        <li><a href="../assets/volunteer-onboarding-flow/buddy-follow-up-form.pdf" download>Buddy follow-up form (PDF)</a> | <a href="../assets/volunteer-onboarding-flow/buddy-follow-up-form.md" download>Editable version</a></li>
+                        <li><a href="../docs/volunteer-onboarding-flow.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/volunteer-onboarding-flow.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

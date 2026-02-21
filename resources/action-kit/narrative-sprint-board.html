@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Kit: Narrative Sprint Board | Tangency Foundation</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="article-page">
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="../../index.html" class="logo">Tangency Foundation</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../literacy.html">Activism Literacy</a></li>
+                    <li><a href="../../programs.html">Our Programs</a></li>
+                    <li><a href="../../resources.html" class="active">Resources</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                    <li><a href="../../terms.html">Terms &amp; Conditions</a></li>
+                    <li><a href="https://benevity.com/causes/840-852519445" class="nav-donate" target="_blank">Donate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <header class="action-kit-hero">
+                <div class="container">
+                    <p class="eyebrow">Action Kit</p>
+                    <h1>Narrative Sprint Board</h1>
+                    <p>Guide your communications team through a focused week-long content sprint that keeps every channel on message and ends with measurable outputs.</p>
+                    <div class="action-kit-meta-row">
+                        <span class="action-kit-meta-chip">Focus: Communications</span>
+                        <span class="action-kit-meta-chip">Format: Sprint Template</span>
+                        <span class="action-kit-meta-chip">Time: 60 min kickoff + async updates</span>
+                        <span class="action-kit-meta-chip">Team: Comms lead + partners</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <div class="container action-kit-body">
+                    <div class="kit-facts-grid">
+                        <p class="kit-fact"><span>Perfect for</span> Launch weeks, report drops, or moments when rapid response overlaps with planned content.</p>
+                        <p class="kit-fact"><span>Deliverable</span> Shared Kanban or spreadsheet with status for each post, pitch, and email.</p>
+                        <p class="kit-fact"><span>Materials</span> Project board (Trello, Airtable, Notion), brand assets, approval matrix.</p>
+                        <p class="kit-fact"><span>Outputs</span> Consistent story arc + analytics recap.</p>
+                    </div>
+
+                    <h3>Before you start</h3>
+                    <p>Define the single argument you need people to remember this week. Draft two proof points and one call-to-action. Everything placed on the board must ladder back to those pillars.</p>
+
+                    <h4>Prep checklist</h4>
+                    <ul>
+                        <li>Create the sprint board with columns for Idea, Drafting, Review, Scheduled, and Live.</li>
+                        <li>List every channel you control: email, SMS, IG, TikTok, press list, podcast, etc.</li>
+                        <li>Gather existing assets (photos, impact stats, quotes) into one shared folder.</li>
+                        <li>Confirm who can approve copy, graphics, and spokespeople so there’s no bottleneck mid-sprint.</li>
+                    </ul>
+
+                    <div class="kit-steps">
+                        <h3>Running the sprint</h3>
+                        <ol>
+                            <li><strong>Kickoff (Day 0, 60 min).</strong> Walk through the message brief, assign owners to each channel, and time-box production windows.</li>
+                            <li><strong>Async stand-ups (Daily, 10 min).</strong> Use Slack threads or Loom updates for blockers and quick wins. Only schedule a meeting if multiple pieces stall.</li>
+                            <li><strong>Amplify proof (Mid-week).</strong> Share early analytics so the team can double down on what’s resonating. Encourage remixing high performers for slower channels.</li>
+                            <li><strong>Close + retro (End of week, 30 min).</strong> Capture what worked, what flopped, and the templates you want to reuse. Export the board as documentation for partners.</li>
+                        </ol>
+                    </div>
+
+                    <div class="kit-callout">
+                        <h4>Tips</h4>
+                        <ul>
+                            <li>Pin your key talking points at the top of every channel-specific task so editors keep them in view.</li>
+                            <li>Store captions, graphics, and alt text inside the card so future campaigns can repurpose quickly.</li>
+                            <li>Use UTM links or simple tracking codes to tie conversions back to the sprint.</li>
+                        </ul>
+                    </div>
+
+                    <h4>Tools &amp; templates</h4>
+                    <ul class="kit-downloads-list">
+                        <li><a href="../assets/narrative-sprint-board/sprint-board-template.csv" download>One-week sprint board template (CSV)</a></li>
+                        <li><a href="../assets/narrative-sprint-board/messaging-brief.pdf" download>Messaging brief doc (PDF)</a> | <a href="../assets/narrative-sprint-board/messaging-brief.md" download>Editable version</a></li>
+                        <li><a href="../assets/narrative-sprint-board/retro-worksheet.pdf" download>Retro worksheet (PDF)</a> | <a href="../assets/narrative-sprint-board/retro-worksheet.md" download>Editable version</a></li>
+                        <li><a href="../docs/narrative-sprint-board.md" download>Download this kit (Markdown)</a></li>
+                        <li><a href="../docs/narrative-sprint-board.pdf" download>Download this kit (PDF)</a></li>
+                    </ul>
+
+                    <div class="more-kits-block">
+                        <a class="action-kit-link" href="../../resources.html#panel-action-kit">← Back to the Action Kit Library</a>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Tangency Foundation. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/action-kit.js"></script>
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('.main-nav');
+        if (toggle && nav) {
+            toggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                toggle.setAttribute('aria-expanded', open);
+            });
+        }
+    </script>
+
+</body>
+</html>

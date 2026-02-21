@@ -969,6 +969,25 @@ h4 {
     color: var(--secondary-color);
 }
 
+.action-kit-open {
+    margin-top: auto;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-kit-open::after {
+    content: '→';
+    transition: transform 0.2s ease;
+}
+
+.action-kit-open:hover::after {
+    transform: translateX(4px);
+}
+
 @media (max-width: 700px) {
     .action-kit-controls {
         flex-direction: column;
@@ -978,6 +997,105 @@ h4 {
     .action-kit-search input {
         width: 100%;
     }
+}
+
+/* --- Action Kit Detail Pages --- */
+.action-kit-hero {
+    background: linear-gradient(120deg, #0d3d45, #1e7a83);
+    color: #fff;
+    padding: 140px 20px 80px;
+    text-align: center;
+}
+
+.action-kit-hero .eyebrow {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.action-kit-hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.action-kit-meta-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.action-kit-meta-chip {
+    background: rgba(255,255,255,0.15);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.kit-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 40px;
+}
+
+.kit-fact {
+    margin: 0;
+}
+
+.kit-fact span {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: #6c757d;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.kit-steps ol {
+    padding-left: 20px;
+}
+
+.kit-steps li {
+    margin-bottom: 20px;
+}
+
+.kit-callout {
+    border-left: 4px solid var(--secondary-color);
+    background: #f4fbfa;
+    padding: 18px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.kit-downloads-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.kit-downloads-list li {
+    margin-bottom: 12px;
+}
+
+.kit-downloads-list a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.more-kits-block {
+    margin-top: 60px;
 }
 
 /* --- Expanded Footer --- */
