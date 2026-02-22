@@ -12,15 +12,15 @@
         }
         body {
             margin: 0;
-            padding: 0;
+            padding: 20px 0;
             background: #f4f6f8;
         }
         .page {
             width: 900px;
-            max-width: 100%;
-            margin: 0 auto 40px auto;
+            max-width: calc(100% - 40px);
+            margin: 0 auto 30px auto;
             background: #fff;
-            padding: 40px 50px;
+            padding: 35px 45px;
             box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             page-break-after: always;
         }
@@ -75,22 +75,31 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        .matrix {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(200px, 1fr));
-            grid-template-rows: repeat(2, minmax(160px, 1fr));
-            gap: 12px;
-            margin-top: 20px;
-        }
-        .matrix div {
-            border: 1px solid #ced7de;
+        .matrix-container {
+            border: 2px dashed #c5d2da;
             border-radius: 10px;
-            padding: 18px;
-            display: flex;
-            flex-direction: column;
+            height: 340px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr;
         }
-        .matrix span {
-            font-size: 13px;
+        .matrix-box {
+            border-right: 1px dashed #d6dee4;
+            border-bottom: 1px dashed #d6dee4;
+            padding: 20px;
+        }
+        .matrix-box:nth-child(2),
+        .matrix-box:nth-child(4) { border-right: none; }
+        .matrix-box:nth-child(3),
+        .matrix-box:nth-child(4) { border-bottom: none; }
+        .matrix-box .badge {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #5e6b74;
+        }
+        .matrix-box .line {
+            margin: 10px 0;
         }
         .badge {
             font-size: 12px;
@@ -108,13 +117,24 @@
             margin-top: 50px;
         }
         @media print {
+            @page {
+                size: letter portrait;
+                margin: 0.5in;
+            }
             body {
-                background: white;
+                background: #fff;
+                padding: 0;
             }
             .page {
+                width: auto;
+                max-width: 100%;
+                margin: 0 0 0.4in 0;
+                padding: 0.35in 0.45in;
                 box-shadow: none;
-                margin: 0 auto;
                 page-break-after: always;
+            }
+            .page:last-of-type {
+                page-break-after: auto;
             }
         }
     </style>
@@ -233,26 +253,36 @@
         <h1>Strategy Selection Grid</h1>
         <p>Plot targets by Influence (vertical) and Support (horizontal). Assign tactics per quadrant.</p>
 
-        <div class="matrix">
-            <div>
+        <div class="matrix-container">
+            <div class="matrix-box">
                 <span class="badge">High Influence · Oppose</span>
                 <h2>Opponents</h2>
                 <p>Tactics: isolate, pressure, expose contradictions.</p>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            <div>
+            <div class="matrix-box">
                 <span class="badge">High Influence · Support</span>
                 <h2>Champions</h2>
                 <p>Tactics: activate, invite to lead, give the microphone.</p>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            <div>
+            <div class="matrix-box">
                 <span class="badge">Low Influence · Oppose</span>
                 <h2>Detractors</h2>
                 <p>Tactics: monitor, neutralize misinformation, keep informed.</p>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
-            <div>
+            <div class="matrix-box">
                 <span class="badge">Low Influence · Support</span>
                 <h2>Allies</h2>
                 <p>Tactics: educate, skill up, gather stories and testimonials.</p>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
         </div>
 
