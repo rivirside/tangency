@@ -1,0 +1,49 @@
+# Tangency Foundation
+
+> Tangency Foundation is a student-run 501(c)(3) nonprofit advancing "activism literacy" — the knowledge, skills, and critical understanding needed for effective, sustainable social change. We serve as a point of tangency between innovative ideas, grassroots movements, and vital resources, offering scholarships, micro-grants, pro-bono consulting, free training, and a large library of free organizing resources. Contact: contact@activisthq.org
+
+Key facts:
+- All consulting services are pro-bono; all resources and guides are free
+- Micro-grants typically range from $250–$1,500 for US-based grassroots projects at any stage
+- Supported projects can receive a Claude (Anthropic AI) membership as an in-kind resource for the duration of their project, supplied through Claude for Nonprofits
+- Donations accepted via PayPal and Benevity (employer matching); 501(c)(3) status
+
+## Main Pages
+
+- [Home](https://activisthq.org/): Mission, featured programs, and the Activist HQ podcast
+- [Activism Literacy](https://activisthq.org/literacy.html): The framework we teach — power analysis, historical context, strategic campaigning, non-violent communication
+- [Our Programs](https://activisthq.org/programs.html): Scholarships, micro-grants, advocacy training, project consulting (including Claude memberships), and the podcast
+- [Resources](https://activisthq.org/resources.html): Searchable library of guides, printable workbooks, action kits, and book recommendations
+- [Contact](https://activisthq.org/contact.html): Get in touch about grants, consulting, partnerships
+- [Participation Terms](https://activisthq.org/terms.html): Terms for scholarships, grants, in-kind resources, and services
+
+## Guides
+
+- [Strategic Campaign Planning](https://activisthq.org/resources/strategic-campaign-planning.html): Move from reactive protest to proactive campaigns
+- [Building & Sustaining a Coalition](https://activisthq.org/resources/building-coalitions-guide.html): Build broad alliances and keep them healthy
+- [Stakeholder Analysis for Impact Projects](https://activisthq.org/resources/stakeholder-analysis-guide.html): Impact/influence mapping with downloadable templates
+- [SWOT Analysis for Impact Projects](https://activisthq.org/resources/swot-impact-guide.html): Mission-centered SWOT with downloadable templates
+- [Digital Security for Activists](https://activisthq.org/resources/digital-security-guide.html): Threat modeling, secure communication, protest prep
+- [Preventing Activist Burnout](https://activisthq.org/resources/activist-burnout-guide.html): Boundaries, collective care, sustainable organizing
+- [How to Write an Op-Ed That Gets Published](https://activisthq.org/resources/writing-op-eds.html): Structure, standing, and pitching
+- [Navigating Media & Press](https://activisthq.org/resources/working-with-media.html): Earning coverage and controlling your message
+- [The Activist's Guide to Social Media](https://activisthq.org/resources/social-media-advocacy.html): Platform comparison for advocacy
+- [10 Books for Any Activist](https://activisthq.org/resources/10-books-for-activists.html): Starting reading list with reviews
+
+## Workbooks (printable)
+
+- [Power Map Workbook](https://activisthq.org/resources/power-map-workbook.html)
+- [Press Day Toolkit](https://activisthq.org/resources/press-day-toolkit-workbook.html)
+- [Policy One-Pager Workbook](https://activisthq.org/resources/policy-one-pager-workbook.html)
+- [Digital Security Workbook](https://activisthq.org/resources/digital-security-workbook.html)
+- [Volunteer Onboarding Workbook](https://activisthq.org/resources/volunteer-onboarding-workbook.html)
+- [Budget Scenarios Workbook](https://activisthq.org/resources/budget-scenarios-workbook.html)
+- [Mutual Aid Drop Spot Workbook](https://activisthq.org/resources/mutual-aid-drop-spot-workbook.html)
+- [Rapid Response Call Circle Workbook](https://activisthq.org/resources/rapid-response-call-circle-workbook.html)
+
+## Optional
+
+- [Activist HQ Podcast on Spotify](https://open.spotify.com/show/1ug6TLV8HHGVJ0FJtiGoid): Interviews with activists and community leaders
+- [Activist HQ Podcast on Apple Podcasts](https://podcasts.apple.com/us/podcast/activist-hq/id1584865828)
+- [Instagram @ActivismHQ](https://instagram.com/ActivismHQ)
+- [Sitemap](https://activisthq.org/sitemap.xml)
